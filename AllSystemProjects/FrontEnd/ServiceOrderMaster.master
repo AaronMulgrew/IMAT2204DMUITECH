@@ -1,0 +1,55 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ServiceOrderMaster.master.cs" Inherits="ServiceOrderMaster" %>
+<!--the doctype is html-->
+<!DOCTYPE html>
+
+<html>
+    <head id="Head1" runat="server">
+        <!--The title of the page-->
+        <title>DMUITech</title>
+        <!--This line of code links the HTML/ASP.NET to the CSS stylesheet-->
+        <link href="CSS.css" rel="stylesheet" type="text/css" />
+    </head>
+    <!--body starts here here-->
+    <body>
+        <!--form starts here here-->
+        <form id="form1" runat="server">
+         <!--header starts here here-->
+            <header>
+              <div id="TopMenu"><asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="Manage your service orders by logging in" Font-Size="Large" />
+                <asp:Button ID="btnRegister" runat="server" Text="Register" OnClick="btnRegister_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="Register for a DMUITech account" Font-Size="Large" /></div>
+                
+            </header>
+            <div id="logo"><asp:Image ID="imgLogo" runat="server" Height="150px" ImageUrl="~/DMUITech_Logo.png" Width="200px" ToolTip="DMUITech" /></div>
+            <!--nav starts here here--> 
+            <nav>
+                 <div id="navbar">
+                    <!--ASP.NET button control-->
+                 <asp:Button ID="btnHome" runat="server" Text="Home" OnClick="btnHome_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="DMUITech Home" Font-Size="Large" />
+                 <asp:Button ID="btnServices" runat="server" Text="Our Services" OnClick="btnServices_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="Explore our services" Font-Size="Large" />
+                 <asp:Button ID="btnAddOrder" runat="server" Text="Create Service Order" OnClick="btnAddOrder_Click" Height="35px" Width="189px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="Create a service order with DMUITech" Font-Size="Large" />
+                 <asp:Button ID="btnHelp" runat="server" Text="Help" OnClick="btnHelp_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="Help topics" Font-Size="Large" />
+                 <asp:Button ID="btnAbout" runat="server" Text="About" OnClick="btnAbout_Click" Height="35px" Width="130px" BackColor="#657198" BorderColor="White" Font-Names="Microsoft Sans Serif" ForeColor="WhiteSmoke" ToolTip="About DMUITech" Font-Size="Large" />
+       </div>    <!--nav ends here--> </nav>
+            <!--article starts here here-->
+                <article> 
+                    <!--article starts here here-->
+                    <!--content placeholder here here-->
+                    <!--the content placeholder is the element that enables content on child pages to be changed
+                        . Anything outside the placeholder can only be changed from master page-->
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server"> 
+                <!--placeholder ends here-->
+                </asp:ContentPlaceHolder>
+                    <br />
+                    <!--article ends here-->
+            </article> 
+            <!--Footer starts here-->
+            <footer>
+                DMUITECH<br />
+                <!--Footer ends here-->
+            </footer>
+            <!--form ends here-->
+        </form>
+        <!--body ends here-->
+    </body>
+    <!--html ends here-->
+</html>
