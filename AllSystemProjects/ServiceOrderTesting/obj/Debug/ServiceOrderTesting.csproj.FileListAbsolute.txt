@@ -1,0 +1,14 @@
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.csprojResolveAssemblyReference.cache
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.dll
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.pdb
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.csprojResolveAssemblyReference.cache
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb

@@ -1,0 +1,10 @@
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.csprojResolveAssemblyReference.cache
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+H:\Documents\2. Year Two\IMAT2204- Project Management & Development\Initial Assignment 1a\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
