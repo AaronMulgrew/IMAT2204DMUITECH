@@ -99,3 +99,28 @@ H:\Desktop\P14165162, Sheikh, Mohammed Talha\ServiceOrderSolution\ServiceOrder\B
 H:\Desktop\P14165162, Sheikh, Mohammed Talha\ServiceOrderSolution\ServiceOrder\BackEnd\obj\Debug\BackEnd.mdiBackend.resources
 H:\Desktop\P14165162, Sheikh, Mohammed Talha\ServiceOrderSolution\ServiceOrder\BackEnd\obj\Debug\BackEnd.Properties.Resources.resources
 H:\Desktop\P14165162, Sheikh, Mohammed Talha\ServiceOrderSolution\ServiceOrder\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe.config
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\bin\Debug\BackEnd.pdb
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.csprojResolveAssemblyReference.cache
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmCancelOrder.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmConfirmation.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmEditUpdate.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmHelp.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmNewCustomer.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmAddOrder.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmMainMenu.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmExistingCustomer.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmOrderHome.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmOrderSummary.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmPay.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmSearch.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmSearchResults.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmSplashScreen.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmStaff.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmUpdateOrder.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.mdiBackend.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.Properties.Resources.resources
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb

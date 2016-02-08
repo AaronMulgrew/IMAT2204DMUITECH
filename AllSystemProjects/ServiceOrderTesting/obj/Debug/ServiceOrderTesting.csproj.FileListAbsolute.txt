@@ -12,3 +12,10 @@ C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\
 C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.csprojResolveAssemblyReference.cache
 C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
 C:\Users\MTSheikh\Desktop\ServiceOrderSolution\ServiceOrder\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.dll
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.pdb
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.csprojResolveAssemblyReference.cache
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
+C:\Users\p14185364\Source\Repos\IMAT2204-DMU-ITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb

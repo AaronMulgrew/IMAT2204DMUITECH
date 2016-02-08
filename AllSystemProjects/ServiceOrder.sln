@@ -27,9 +27,9 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "FrontEnd(1)", "http://local
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BackEnd", "BackEnd\BackEnd.csproj", "{A9CDDF0A-B723-475D-AAD8-DBB094B2A15D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyClassLibrary", "MyClassLibrary\MyClassLibrary.csproj", "{30A316A1-C137-4EAC-A6A6-ECB715932C53}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary", "MyClassLibrary\ClassLibrary.csproj", "{30A316A1-C137-4EAC-A6A6-ECB715932C53}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceOrderTesting", "ServiceOrderTesting\ServiceOrderTesting.csproj", "{848EED38-2665-4447-ADF5-F6E9467679F4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestFramework", "ServiceOrderTesting\TestFramework.csproj", "{848EED38-2665-4447-ADF5-F6E9467679F4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
