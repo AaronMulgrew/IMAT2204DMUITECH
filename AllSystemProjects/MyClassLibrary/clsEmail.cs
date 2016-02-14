@@ -12,29 +12,60 @@ namespace MyClassLibrary
 
         public int EmailNo { get; set; }
 
-        public bool Valid(string SomeEmailAddress)
+        public bool Valid(string EmailAddress)
         {
-            if (SomeEmailAddress.Length == 0)
+            if (EmailAddress.Length == 0)
             {
                 return false;
             }
-            else if (!SomeEmailAddress.Contains("@"))
+            else if (EmailAddress.Length > 255)
             {
                 return false;
             }
-            return true;
+            else if (!EmailAddress.Contains("@"))
+            {
+                return false;
+            }
+            else if (EmailAddress.Contains("@"))
+            {
+                if (EmailAddress.Contains("."))
+                {
+                    return true;
+                }
+                return false;
+            }
+
+            else
+            {
+                return true;
+            }
         }
 
         public bool TimeStampValid(string TimeStamp)
         {
-            Int32 DateNowYearMin = Convert.ToInt32(DateTime.Now.Year);
-            DateNowYearMin = DateNowYearMin - 30;
-            Int32 TimeStampInt = Convert.ToInt32(TimeStamp);
-            if (TimeStampInt < DateNowYearMin)
+            try
+            {
+                Int32 DateNowYear = Convert.ToInt32(DateTime.Now.Year);
+                Int32 DateNowYearMin = DateNowYear - 30;
+                Int32 TimeStampInt = Convert.ToInt32(TimeStamp);
+                if (TimeStampInt < DateNowYearMin)
+                {
+                    return false;
+                }
+                else if (TimeStampInt > DateNowYear)
+                {
+                    return false;
+                }
+                return true;
+            }
+
+            catch
             {
                 return false;
             }
-            return true;
+
         }
+
+        public DateTime TimeStamp { get; set; }
     }
 }

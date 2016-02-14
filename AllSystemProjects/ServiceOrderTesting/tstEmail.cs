@@ -17,6 +17,15 @@ namespace TestEmail
         }
 
         [TestMethod]
+        public void TimeStampOK()
+        {
+            clsEmail TestEmail = new clsEmail();
+            DateTime TestData = new DateTime(25 / 07 / 2012);
+            TestEmail.TimeStamp = TestData;
+            Assert.AreEqual(TestEmail.TimeStamp, TestData);
+        }
+
+        [TestMethod]
         public void EmailAddressOK()
         {
             //instance of clsEmail
@@ -76,11 +85,129 @@ namespace TestEmail
         }
 
         [TestMethod]
+        public void EmailAddressMin()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("j@c");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void EmailAddressMid()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("wjwjjwwjjwjwjw@gmail.com");
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void EmailAddressMax()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("Skljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void EmailAddressMaxPlusOne()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("Sakljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void EmailAddressExtreme()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("Skljddaqwwuiwuweuieuiueiiuewueweiukdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void EmailAddressInvalid()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.Valid("1212980");
+            Assert.IsFalse(OK);
+        }
+
+
+        [TestMethod]
+        public void TimeStampExtremeMin()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("1900");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
         public void TimeStampMinLessOne()
         {
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
-            OK = TestEmail.TimeStampValid("1950");
+            OK = TestEmail.TimeStampValid("1985");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampMin()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("1986");
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampMid()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("1996");
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampMax()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("2016");
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampMaxPlusOne()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("2017");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampExtremeMax()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("2066");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void TimeStampMaxInvalidData()
+        {
+            clsEmail TestEmail = new clsEmail();
+            Boolean OK;
+            OK = TestEmail.TimeStampValid("101010101");
             Assert.IsFalse(OK);
         }
 
