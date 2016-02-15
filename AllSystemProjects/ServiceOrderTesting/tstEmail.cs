@@ -71,8 +71,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -81,8 +84,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("mulgrewaaron1gmail.com");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -91,8 +97,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("j@c");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -101,8 +110,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("wjwjjwwjjwjwjw@gmail.com");
+            //check to see if result is ok
             Assert.IsTrue(OK);
         }
 
@@ -111,8 +123,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("Skljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            //check to see if result is ok
             Assert.IsTrue(OK);
         }
 
@@ -121,8 +136,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("Sakljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -131,8 +149,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("Skljddaqwwuiwuweuieuiueiiuewueweiukdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -141,8 +162,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.Valid("1212980");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -152,8 +176,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("1900");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -162,7 +189,9 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("1985");
             Assert.IsFalse(OK);
         }
@@ -172,8 +201,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("1986");
+            //check to see if result is ok
             Assert.IsTrue(OK);
         }
 
@@ -182,8 +214,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("1996");
+            //check to see if result is ok
             Assert.IsTrue(OK);
         }
 
@@ -192,8 +227,10 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
             OK = TestEmail.TimeStampValid("2016");
+            //check to see if result is ok
             Assert.IsTrue(OK);
         }
 
@@ -202,8 +239,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("2017");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -212,8 +252,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("2066");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
@@ -222,8 +265,11 @@ namespace TestEmail
         {
             //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
             Boolean OK;
+            //test data to the property
             OK = TestEmail.TimeStampValid("101010101");
+            //check to see if result is ok
             Assert.IsFalse(OK);
         }
 
