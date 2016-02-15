@@ -69,6 +69,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressMinLessOne()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("");
@@ -78,6 +79,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressWithoutAt()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("mulgrewaaron1gmail.com");
@@ -87,6 +89,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressMin()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("j@c");
@@ -96,6 +99,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressMid()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("wjwjjwwjjwjwjw@gmail.com");
@@ -105,6 +109,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressMax()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("Skljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
@@ -114,6 +119,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressMaxPlusOne()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("Sakljdkdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
@@ -123,6 +129,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressExtreme()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("Skljddaqwwuiwuweuieuiueiiuewueweiukdjdldkjdkdjkldljkdjkkakjsjksjkjksjksjksjksjksjksjkjskjksjksjkjssjsjsjjsjsjsjsjsjsjsjsjjsjsjasjsjsjsjsjsjsjsjsjsjsjsjsjjallalqowpoweopwowposjksjksjkjksjsaaaaaaaajkssjkjssjsjsjssjsqjwjsjsjsjsjsaaajsjsjsjjjjjjwqasjsjsjsjsjsjsjjskjslkjdjkldjkl@gmail.com");
@@ -132,6 +139,7 @@ namespace TestEmail
         [TestMethod]
         public void EmailAddressInvalid()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.Valid("1212980");
@@ -142,6 +150,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampExtremeMin()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("1900");
@@ -151,6 +160,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMinLessOne()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("1985");
@@ -160,6 +170,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMin()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("1986");
@@ -169,6 +180,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMid()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("1996");
@@ -178,6 +190,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMax()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("2016");
@@ -187,6 +200,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMaxPlusOne()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("2017");
@@ -196,6 +210,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampExtremeMax()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("2066");
@@ -205,6 +220,7 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampMaxInvalidData()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
             Boolean OK;
             OK = TestEmail.TimeStampValid("101010101");
