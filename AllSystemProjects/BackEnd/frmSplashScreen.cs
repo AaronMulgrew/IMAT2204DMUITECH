@@ -41,8 +41,6 @@ namespace BackEnd
      frmMainMenu mf = new frmMainMenu();
      //show the form
      mf.Show();
-     //hide the splash screen form
-     this.Hide();
  
         }
     }
