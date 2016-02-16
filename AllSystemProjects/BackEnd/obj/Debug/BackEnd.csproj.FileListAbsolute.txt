@@ -171,6 +171,6 @@ C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\D
 C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmSplashScreen.resources
 C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmStaff.resources
 C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmUpdateOrder.resources
-C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.mdiBackend.resources
 C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.Properties.Resources.resources
 C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
+C:\Users\p14185364\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.mdiBackend.resources
