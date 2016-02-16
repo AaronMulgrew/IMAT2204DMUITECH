@@ -19,9 +19,13 @@ namespace TestEmail
         [TestMethod]
         public void TimeStampOK()
         {
+            //instance of the clsEmail
             clsEmail TestEmail = new clsEmail();
+            //put in some test data
             DateTime TestData = new DateTime(25 / 07 / 2012);
+            //assign the data to the property
             TestEmail.TimeStamp = TestData;
+            //check to see the data is equal
             Assert.AreEqual(TestEmail.TimeStamp, TestData);
         }
 
@@ -272,6 +276,83 @@ namespace TestEmail
             //check to see if result is ok
             Assert.IsFalse(OK);
         }
+
+        [TestMethod]
+        public void EmailSubjectMinLessOne()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            //test data to the property
+            OK = TestEmail.EmailSubjectValid("Aa");
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void EmailSubjectMin()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            //test data to the property
+            OK = TestEmail.EmailSubjectValid("aaa");
+            //check to see if result is ok
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void EmailSubjectMid()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            //test data to the property
+            OK = TestEmail.EmailSubjectValid("aaaaaaaaaaa");
+            //check to see if result is ok
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void EmailSubjectMax()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            OK = TestEmail.EmailSubjectValid("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            //check to see if result is ok
+            Assert.IsTrue(OK);
+        }
+
+        [TestMethod]
+        public void EmailSubjectMaxPlusOne()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            //test data to the property
+            OK = TestEmail.EmailSubjectValid("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            //check to see if result is ok
+            Assert.IsFalse(OK);
+        }
+
+        [TestMethod]
+        public void EmailSubjectExtremeMax()
+        {
+            //instance of the clsEmail
+            clsEmail TestEmail = new clsEmail();
+            //test data to store result of validation
+            Boolean OK;
+            //test data to the property
+            OK = TestEmail.EmailSubjectValid("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+            //check to see if result is ok
+            Assert.IsFalse(OK);
+        }
+
 
     }
 }

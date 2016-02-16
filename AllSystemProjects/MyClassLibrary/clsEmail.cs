@@ -83,6 +83,22 @@ namespace MyClassLibrary
 
         }
 
+        //get the timestamp
         public DateTime TimeStamp { get; set; }
+
+        public bool EmailSubjectValid(string EmailSubject)
+        {
+            //if the email subject is less than three
+            if (EmailSubject.Length < 3)
+            {
+                return false;
+            }
+            //if the email subject is more than 100
+            else if (EmailSubject.Length > 100)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
