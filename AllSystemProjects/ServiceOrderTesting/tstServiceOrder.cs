@@ -3,6 +3,7 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyClassLibrary;
+using System.Collections.Generic;
 
 namespace ServiceOrderTesting
 {
@@ -305,6 +306,12 @@ namespace ServiceOrderTesting
             OK = AnOrder.Valid(SomeService);
             //test to see if result is ok
             Assert.IsTrue(OK);
+        }
+        [TestMethod]
+        public void AllOrdersOK()
+        {
+            //create instance of class
+            clsOrder
         }
        
      }
