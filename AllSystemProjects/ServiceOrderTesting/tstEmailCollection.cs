@@ -49,5 +49,28 @@ namespace ServiceOrderTesting
             //test to see that the two are the same
             Assert.AreEqual(Emails.AllEmails, TestList);
         }
+
+
+        [TestMethod]
+        public void CountMatchesList()
+        {
+            //create instance of the class
+            clsEmailCollection Emails = new clsEmailCollection();
+            //create some test data
+            List<clsEmail> TestList = new List<clsEmail>();
+            //add an item to the list
+            clsEmail TestItem = new clsEmail();
+            //set the properties
+            TestItem.EmailNo = 1;
+            TestItem.EmailAddress = "mulgrewaaron1@gmail.com";
+            //add the item to the test list
+            TestList.Add(TestItem);
+            //assign the data
+            Emails.AllEmails = TestList;
+            //test to see that the two are the same
+            Assert.AreEqual(Emails.Count, TestList);
+        }
+
+
     }
 }

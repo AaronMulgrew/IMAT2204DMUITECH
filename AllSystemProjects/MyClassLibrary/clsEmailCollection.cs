@@ -7,8 +7,34 @@ namespace MyClassLibrary
 {
     public class clsEmailCollection
     {
-        public int Count { get; set; }
+        //private data member for the allemails list
+        private List<clsEmail> allEmails;
 
-        public List<clsEmail> AllEmails { get; set; }
+        //public property for count
+        public int Count
+        {
+            get
+            {
+                //return all count properties
+                return allEmails.Count;
+            }
+            set
+            {
+                //look at this later
+            }
+        }
+
+        public List<clsEmail> AllEmails
+        {
+            get
+            {
+                return allEmails;
+            }
+
+            set
+            {
+                allEmails = value;
+            }
+        }
     }
 }
