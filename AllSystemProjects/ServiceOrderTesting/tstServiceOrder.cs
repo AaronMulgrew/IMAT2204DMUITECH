@@ -310,8 +310,7 @@ namespace ServiceOrderTesting
         [TestMethod]
         public void AllOrdersOK()
         {
-            //create instance of class
-            clsOrder
+
         }
        
      }
