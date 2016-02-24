@@ -18,12 +18,12 @@ namespace ServiceOrderTesting
         }
 
         [TestMethod]
-        public void CountPropetyOK()
+        public void CountPropertyOK()
         {
             //create instance of the class
             clsEmailCollection AllEmails = new clsEmailCollection();
             //generate some test data
-            Int32 SomeCount = 1;
+            Int32 SomeCount = 0;
             //assign the data
             AllEmails.Count = SomeCount;
             //test to see if equal
@@ -68,7 +68,7 @@ namespace ServiceOrderTesting
             //assign the data
             Emails.AllEmails = TestList;
             //test to see that the two are the same
-            Assert.AreEqual(Emails.Count, TestList);
+            Assert.AreEqual(Emails.Count, TestList.Count);
         }
 
 
