@@ -53,6 +53,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="tstEmail.cs" />
     <Compile Include="tstEmailCollection.cs" />
+    <Compile Include="tstInvoice.cs" />
     <Compile Include="tstServiceOrder.cs" />
   </ItemGroup>
   <ItemGroup>

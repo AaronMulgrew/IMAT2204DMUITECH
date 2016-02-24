@@ -42,6 +42,7 @@
     <Compile Include="clsCustomerSavedSearch.cs" />
     <Compile Include="clsEmail.cs" />
     <Compile Include="clsEmailCollection.cs" />
+    <Compile Include="clsInvoice.cs" />
     <Compile Include="clsServiceOrder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
