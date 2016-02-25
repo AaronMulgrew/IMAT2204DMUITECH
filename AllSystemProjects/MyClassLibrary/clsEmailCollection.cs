@@ -12,19 +12,26 @@ namespace MyClassLibrary
         //contstructor
         public clsEmailCollection()
         {
-            //instance of the email class
-            clsEmail AnEmail = new clsEmail();
-            //set the email address
-            AnEmail.EmailAddress = "mulgrewaaron1@gmail.com";
-            //add the email to the private list
-            allEmails.Add(AnEmail);
-            //re-initialise the AnEmail object to accept a new item
-            AnEmail = new clsEmail();
-            //set another email address
-            AnEmail.EmailAddress = "azz7008@gmail.com";
-            //add the second email address to the private list
-            allEmails.Add(AnEmail);
-            //private list now contains 2 emails
+            //instance of the database connection class
+            clsDataConnection DB = new clsDataConnection();
+            //exectue the stored procedure
+            DB.Execute("sproc_tblEmail_SelectAll");
+            //get the count
+            Int32 RecordCount = DB.Count;
+            //set up index for the loop
+            Int32 Index = 0;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a new instance of the email class
+                clsEmail AnEmail = new clsEmail();
+                //get the email name
+                AnEmail.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
+                //get the primary key
+                AnEmail.EmailNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailNo"]);
+                //add to the index
+                Index++;
+            }
         }
 
 

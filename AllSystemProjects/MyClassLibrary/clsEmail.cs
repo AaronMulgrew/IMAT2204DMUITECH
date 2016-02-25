@@ -11,7 +11,7 @@ namespace MyClassLibrary
         public object EmailAddress { get; set; }
 
         //getter and setter
-        public int EmailNo { get; set; }
+        public object EmailNo { get; set; }
 
 
         //valid function

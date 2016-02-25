@@ -23,7 +23,7 @@ namespace ServiceOrderTesting
             //create instance of the class
             clsEmailCollection AllEmails = new clsEmailCollection();
             //generate some test data
-            Int32 SomeCount = 2;
+            Int32 SomeCount = 997;
             //assign the data
             AllEmails.Count = SomeCount;
             //test to see if equal
@@ -71,14 +71,14 @@ namespace ServiceOrderTesting
             Assert.AreEqual(Emails.Count, TestList.Count);
         }
 
-        [TestMethod]
-        public void TwoEmailsPresent()
-        {
-            //create instance of the class
-            clsEmailCollection Emails = new clsEmailCollection();
-            //test to see the two values are equal
-            Assert.AreEqual(Emails.Count, 2);
-        }
+        //[TestMethod]
+        //public void TwoEmailsPresent()
+        //{
+        //    //create instance of the class
+        //    clsEmailCollection Emails = new clsEmailCollection();
+        //    //test to see the two values are equal
+        //    Assert.AreEqual(Emails.Count, 2);
+        //}
 
 
     }
