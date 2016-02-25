@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsCustomerSavedSearch.cs" />
+    <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsEmail.cs" />
     <Compile Include="clsEmailCollection.cs" />
     <Compile Include="clsInvoice.cs" />
