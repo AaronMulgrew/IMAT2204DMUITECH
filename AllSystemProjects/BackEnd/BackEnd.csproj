@@ -62,6 +62,12 @@
     <Compile Include="frmConfirmation.Designer.cs">
       <DependentUpon>frmConfirmation.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmContactList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmContactList.Designer.cs">
+      <DependentUpon>frmContactList.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmEditUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -187,6 +193,9 @@
     <EmbeddedResource Include="frmConfirmation.resx">
       <DependentUpon>frmConfirmation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmContactList.resx">
+      <DependentUpon>frmContactList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmEditUpdate.resx">
       <DependentUpon>frmEditUpdate.cs</DependentUpon>
     </EmbeddedResource>
@@ -275,6 +284,12 @@
     <Content Include="Resources\spinninggif.gif" />
     <Content Include="Resources\spinninggif2.gif" />
     <Content Include="Resources\Untitled-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MyClassLibrary\ClassLibrary.csproj">
+      <Project>{30a316a1-c137-4eac-a6a6-ecb715932c53}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

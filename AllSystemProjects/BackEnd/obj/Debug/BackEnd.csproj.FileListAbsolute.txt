@@ -204,3 +204,6 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewEmail.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewInbox.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmMainMenu.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\bin\Debug\MyClassLibrary.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\bin\Debug\MyClassLibrary.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmContactList.resources

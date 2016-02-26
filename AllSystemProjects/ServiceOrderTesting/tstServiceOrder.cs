@@ -3,7 +3,6 @@ using System.Text;
 using System.Collections.Generic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using MyClassLibrary;
-using System.Collections.Generic;
 
 namespace ServiceOrderTesting
 {

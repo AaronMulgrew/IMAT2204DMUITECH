@@ -135,5 +135,10 @@ namespace BackOffice
             //this displays the attachmentpath in the path name
             this.txtBxAttachmentPath.Text = filepath;
         }
+
+        private void btnContactList_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
