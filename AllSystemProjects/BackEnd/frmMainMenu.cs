@@ -8,64 +8,43 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BackEnd
+namespace BackOffice
 {
-    public partial class frmMainMenu : Form
+    public partial class FrmMainMenu : Form
     {
-        public frmMainMenu()
+        public FrmMainMenu()
         {
             InitializeComponent();
         }
-        
-        private void btnServiceOrders_Click(object sender, EventArgs e)
-        {
-            //create instance of form
-            frmOrderHome OrderHome = new frmOrderHome();
-            //display the form
-            OrderHome.Show();
-        }
 
-        private void frmMainMenu_Load(object sender, EventArgs e)
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnClose_Click(object sender, EventArgs e)
-        {
-            //close the form
+            //this closes the form
             Close();
         }
 
-        private void btnHelp_Click(object sender, EventArgs e)
+        private void btnEmailClient_Click(object sender, EventArgs e)
         {
-            //create instance of form
-            frmHelp Help = new frmHelp();
-            //display the form
-            Help.Show();
+            //this sends us to the private function showemail
+            ShowEmail();
         }
 
-        private void btnStaff_Click(object sender, EventArgs e)
+        private void emailClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //create instance of form
-            frmStaff Staff = new frmStaff();
-            //display the form
-            Staff.Show();
+            //this Sends us to the private function Showemail
+            ShowEmail();
         }
 
-        private void btnServices_Click(object sender, EventArgs e)
+        private void ShowEmail()
         {
-
+            //this shows the new EmailClient Form
+            FrmEmailClient EmailClient = new FrmEmailClient();
+            EmailClient.Show();
         }
 
-        private void frmMainMenu_Shown(object sender, EventArgs e)
+        private void FrmMainMenu_Load(object sender, EventArgs e)
         {
 
-        }
-
-        private void frmMainMenu_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            //exit application when form is closed
-            Application.Exit();
         }
     }
 }

@@ -134,7 +134,6 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmHelp.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmNewCustomer.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmAddOrder.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmMainMenu.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmExistingCustomer.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmOrderHome.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmOrderSummary.resources
@@ -199,3 +198,9 @@ C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\D
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmComposeEmail.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmEmailClient.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmSavedSearch.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewEmail.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewInbox.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmMainMenu.resources

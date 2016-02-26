@@ -9,7 +9,12 @@ namespace MyClassLibrary
 
     public class clsEmailCollection
     {
-        //contstructor
+
+
+        //private data member for the allemails list
+        private List<clsEmail> allEmails = new List<clsEmail>();
+
+        //public constructor
         public clsEmailCollection()
         {
             //instance of the database connection class
@@ -24,19 +29,15 @@ namespace MyClassLibrary
             while (Index < RecordCount)
             {
                 //create a new instance of the email class
-                clsEmail AnEmail = new clsEmail();
+                clsEmail AEmail = new clsEmail();
                 //get the email name
-                AnEmail.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
+                AEmail.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
                 //get the primary key
-                AnEmail.EmailNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailNo"]);
+                AEmail.EmailNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailNo"]);
                 //add to the index
                 Index++;
             }
         }
-
-
-        //private data member for the allemails list
-        private List<clsEmail> allEmails = new List<clsEmail>();
 
         //public property for count
         public int Count

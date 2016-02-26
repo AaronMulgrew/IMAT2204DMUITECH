@@ -1,6 +1,6 @@
-﻿namespace BackEnd
+﻿namespace BackOffice
 {
-    partial class frmMainMenu
+    partial class FrmMainMenu
     {
         /// <summary>
         /// Required designer variable.
@@ -28,158 +28,117 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnServices = new System.Windows.Forms.Button();
-            this.btnAppointments = new System.Windows.Forms.Button();
-            this.btnEmailManagement = new System.Windows.Forms.Button();
-            this.btnCustomers = new System.Windows.Forms.Button();
-            this.btnHelp = new System.Windows.Forms.Button();
-            this.btnServiceOrders = new System.Windows.Forms.Button();
-            this.btnClose = new System.Windows.Forms.Button();
-            this.btnStaff = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmMainMenu));
+            this.MenuStripMainMenu = new System.Windows.Forms.MenuStrip();
+            this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.emailClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnEmailClient = new System.Windows.Forms.Button();
+            this.lblMainMenu = new System.Windows.Forms.Label();
+            this.PicBoxLogo = new System.Windows.Forms.PictureBox();
+            this.MenuStripMainMenu.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLogo)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnServices
+            // MenuStripMainMenu
             // 
-            this.btnServices.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnServices.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnServices.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnServices.Location = new System.Drawing.Point(322, 276);
-            this.btnServices.Margin = new System.Windows.Forms.Padding(4);
-            this.btnServices.Name = "btnServices";
-            this.btnServices.Size = new System.Drawing.Size(418, 75);
-            this.btnServices.TabIndex = 1;
-            this.btnServices.Text = "Services";
-            this.btnServices.UseVisualStyleBackColor = false;
-            this.btnServices.Click += new System.EventHandler(this.btnServices_Click);
+            this.MenuStripMainMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(184)))), ((int)(((byte)(222)))));
+            this.MenuStripMainMenu.Font = new System.Drawing.Font("Trebuchet MS", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MenuStripMainMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fileToolStripMenuItem,
+            this.emailClientToolStripMenuItem});
+            this.MenuStripMainMenu.Location = new System.Drawing.Point(0, 0);
+            this.MenuStripMainMenu.Name = "MenuStripMainMenu";
+            this.MenuStripMainMenu.Size = new System.Drawing.Size(1478, 44);
+            this.MenuStripMainMenu.TabIndex = 0;
+            this.MenuStripMainMenu.Text = "menuStrip1";
             // 
-            // btnAppointments
+            // fileToolStripMenuItem
             // 
-            this.btnAppointments.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnAppointments.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnAppointments.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnAppointments.Location = new System.Drawing.Point(322, 382);
-            this.btnAppointments.Margin = new System.Windows.Forms.Padding(4);
-            this.btnAppointments.Name = "btnAppointments";
-            this.btnAppointments.Size = new System.Drawing.Size(418, 75);
-            this.btnAppointments.TabIndex = 2;
-            this.btnAppointments.Text = "Appointments";
-            this.btnAppointments.UseVisualStyleBackColor = false;
+            this.fileToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(184)))), ((int)(((byte)(222)))));
+            this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.exitToolStripMenuItem});
+            this.fileToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
+            this.fileToolStripMenuItem.Size = new System.Drawing.Size(73, 40);
+            this.fileToolStripMenuItem.Text = "File";
             // 
-            // btnEmailManagement
+            // exitToolStripMenuItem
             // 
-            this.btnEmailManagement.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnEmailManagement.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnEmailManagement.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnEmailManagement.Location = new System.Drawing.Point(320, 490);
-            this.btnEmailManagement.Margin = new System.Windows.Forms.Padding(4);
-            this.btnEmailManagement.Name = "btnEmailManagement";
-            this.btnEmailManagement.Size = new System.Drawing.Size(418, 75);
-            this.btnEmailManagement.TabIndex = 3;
-            this.btnEmailManagement.Text = "Email Management";
-            this.btnEmailManagement.UseVisualStyleBackColor = false;
+            this.exitToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(184)))), ((int)(((byte)(222)))));
+            this.exitToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(138, 40);
+            this.exitToolStripMenuItem.Text = "Exit";
+            this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
-            // btnCustomers
+            // emailClientToolStripMenuItem
             // 
-            this.btnCustomers.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnCustomers.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnCustomers.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnCustomers.Location = new System.Drawing.Point(322, 595);
-            this.btnCustomers.Margin = new System.Windows.Forms.Padding(4);
-            this.btnCustomers.Name = "btnCustomers";
-            this.btnCustomers.Size = new System.Drawing.Size(418, 75);
-            this.btnCustomers.TabIndex = 4;
-            this.btnCustomers.Text = "Customers";
-            this.btnCustomers.UseVisualStyleBackColor = false;
+            this.emailClientToolStripMenuItem.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(184)))), ((int)(((byte)(222)))));
+            this.emailClientToolStripMenuItem.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.emailClientToolStripMenuItem.Name = "emailClientToolStripMenuItem";
+            this.emailClientToolStripMenuItem.Size = new System.Drawing.Size(178, 40);
+            this.emailClientToolStripMenuItem.Text = "Email Client";
+            this.emailClientToolStripMenuItem.Click += new System.EventHandler(this.emailClientToolStripMenuItem_Click);
             // 
-            // btnHelp
+            // btnEmailClient
             // 
-            this.btnHelp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnHelp.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnHelp.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnHelp.Location = new System.Drawing.Point(322, 695);
-            this.btnHelp.Margin = new System.Windows.Forms.Padding(4);
-            this.btnHelp.Name = "btnHelp";
-            this.btnHelp.Size = new System.Drawing.Size(418, 75);
-            this.btnHelp.TabIndex = 5;
-            this.btnHelp.Text = "Help";
-            this.btnHelp.UseVisualStyleBackColor = false;
-            this.btnHelp.Click += new System.EventHandler(this.btnHelp_Click);
+            this.btnEmailClient.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(15)))), ((int)(((byte)(65)))));
+            this.btnEmailClient.Font = new System.Drawing.Font("Trebuchet MS", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEmailClient.ForeColor = System.Drawing.Color.White;
+            this.btnEmailClient.Image = ((System.Drawing.Image)(resources.GetObject("btnEmailClient.Image")));
+            this.btnEmailClient.Location = new System.Drawing.Point(114, 221);
+            this.btnEmailClient.Name = "btnEmailClient";
+            this.btnEmailClient.Size = new System.Drawing.Size(354, 235);
+            this.btnEmailClient.TabIndex = 1;
+            this.btnEmailClient.Text = "Email Client";
+            this.btnEmailClient.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.btnEmailClient.UseVisualStyleBackColor = false;
+            this.btnEmailClient.Click += new System.EventHandler(this.btnEmailClient_Click);
             // 
-            // btnServiceOrders
+            // lblMainMenu
             // 
-            this.btnServiceOrders.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnServiceOrders.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnServiceOrders.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnServiceOrders.Location = new System.Drawing.Point(320, 171);
-            this.btnServiceOrders.Margin = new System.Windows.Forms.Padding(4);
-            this.btnServiceOrders.Name = "btnServiceOrders";
-            this.btnServiceOrders.Size = new System.Drawing.Size(418, 75);
-            this.btnServiceOrders.TabIndex = 6;
-            this.btnServiceOrders.Text = "Service Orders";
-            this.btnServiceOrders.UseVisualStyleBackColor = false;
-            this.btnServiceOrders.Click += new System.EventHandler(this.btnServiceOrders_Click);
+            this.lblMainMenu.AutoSize = true;
+            this.lblMainMenu.Font = new System.Drawing.Font("Lucida Bright", 20F);
+            this.lblMainMenu.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblMainMenu.Location = new System.Drawing.Point(34, 84);
+            this.lblMainMenu.Name = "lblMainMenu";
+            this.lblMainMenu.Size = new System.Drawing.Size(232, 45);
+            this.lblMainMenu.TabIndex = 2;
+            this.lblMainMenu.Text = "Main Menu";
             // 
-            // btnClose
+            // FrmMainMenu
             // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(32, 19);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(180, 83);
-            this.btnClose.TabIndex = 7;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
-            // 
-            // btnStaff
-            // 
-            this.btnStaff.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnStaff.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnStaff.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnStaff.Location = new System.Drawing.Point(750, 19);
-            this.btnStaff.Margin = new System.Windows.Forms.Padding(4);
-            this.btnStaff.Name = "btnStaff";
-            this.btnStaff.Size = new System.Drawing.Size(276, 83);
-            this.btnStaff.TabIndex = 8;
-            this.btnStaff.Text = "Staff Portal";
-            this.btnStaff.UseVisualStyleBackColor = false;
-            this.btnStaff.Click += new System.EventHandler(this.btnStaff_Click);
-            // 
-            // frmMainMenu
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1054, 869);
-            this.Controls.Add(this.btnStaff);
-            this.Controls.Add(this.btnClose);
-            this.Controls.Add(this.btnServiceOrders);
-            this.Controls.Add(this.btnHelp);
-            this.Controls.Add(this.btnCustomers);
-            this.Controls.Add(this.btnEmailManagement);
-            this.Controls.Add(this.btnAppointments);
-            this.Controls.Add(this.btnServices);
-            this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "frmMainMenu";
+            this.ClientSize = new System.Drawing.Size(1478, 844);
+            this.Controls.Add(this.PicBoxLogo);
+            this.Controls.Add(this.lblMainMenu);
+            this.Controls.Add(this.btnEmailClient);
+            this.Controls.Add(this.MenuStripMainMenu);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.MenuStripMainMenu;
+            this.Name = "FrmMainMenu";
             this.Text = "Main Menu";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.frmMainMenu_FormClosed);
-            this.Load += new System.EventHandler(this.frmMainMenu_Load);
-            this.Shown += new System.EventHandler(this.frmMainMenu_Shown);
+            this.Load += new System.EventHandler(this.FrmMainMenu_Load);
+            this.MenuStripMainMenu.ResumeLayout(false);
+            this.MenuStripMainMenu.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PicBoxLogo)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnServices;
-        private System.Windows.Forms.Button btnAppointments;
-        private System.Windows.Forms.Button btnEmailManagement;
-        private System.Windows.Forms.Button btnCustomers;
-        private System.Windows.Forms.Button btnHelp;
-        private System.Windows.Forms.Button btnServiceOrders;
-        private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnStaff;
+        private System.Windows.Forms.MenuStrip MenuStripMainMenu;
+        private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem exitToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem emailClientToolStripMenuItem;
+        private System.Windows.Forms.Button btnEmailClient;
+        private System.Windows.Forms.Label lblMainMenu;
+        private System.Windows.Forms.PictureBox PicBoxLogo;
     }
 }
+

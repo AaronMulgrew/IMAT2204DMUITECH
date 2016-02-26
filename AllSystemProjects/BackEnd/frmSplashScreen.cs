@@ -35,13 +35,6 @@ namespace BackEnd
  }
  void tmr_Tick(object sender, EventArgs e)
  {
-     //after 2 sec stop the timer - the splash screen should disappear
-     tmr.Stop();
-     //display mthe main menu form
-     frmMainMenu mf = new frmMainMenu();
-     //show the form
-     mf.Show();
- 
         }
     }
 }

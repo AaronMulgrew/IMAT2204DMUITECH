@@ -8,10 +8,10 @@ namespace MyClassLibrary
     public class clsEmail
     {
         //getter and setter
-        public object EmailAddress { get; set; }
+        public string EmailAddress { get; set; }
 
         //getter and setter
-        public object EmailNo { get; set; }
+        public int EmailNo { get; set; }
 
 
         //valid function

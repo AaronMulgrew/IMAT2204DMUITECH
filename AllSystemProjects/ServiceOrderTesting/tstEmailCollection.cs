@@ -22,8 +22,8 @@ namespace ServiceOrderTesting
         {
             //create instance of the class
             clsEmailCollection AllEmails = new clsEmailCollection();
-            //generate some test data
-            Int32 SomeCount = 997;
+            //count some database data
+            Int32 SomeCount = 0;
             //assign the data
             AllEmails.Count = SomeCount;
             //test to see if equal

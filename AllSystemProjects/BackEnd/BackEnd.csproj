@@ -50,6 +50,12 @@
     <Compile Include="frmCancelOrder.Designer.cs">
       <DependentUpon>frmCancelOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmComposeEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmComposeEmail.designer.cs">
+      <DependentUpon>FrmComposeEmail.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmConfirmation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -61,6 +67,12 @@
     </Compile>
     <Compile Include="frmEditUpdate.Designer.cs">
       <DependentUpon>frmEditUpdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmEmailClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmEmailClient.designer.cs">
+      <DependentUpon>FrmEmailClient.cs</DependentUpon>
     </Compile>
     <Compile Include="frmHelp.cs">
       <SubType>Form</SubType>
@@ -110,6 +122,12 @@
     <Compile Include="frmPay.Designer.cs">
       <DependentUpon>frmPay.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmSavedSearch.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSavedSearch.designer.cs">
+      <DependentUpon>FrmSavedSearch.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSearch.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -140,6 +158,18 @@
     <Compile Include="frmUpdateOrder.Designer.cs">
       <DependentUpon>frmUpdateOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmViewEmail.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewEmail.designer.cs">
+      <DependentUpon>FrmViewEmail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmViewInbox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmViewInbox.designer.cs">
+      <DependentUpon>FrmViewInbox.cs</DependentUpon>
+    </Compile>
     <Compile Include="mdiBackend.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,11 +181,17 @@
     <EmbeddedResource Include="frmCancelOrder.resx">
       <DependentUpon>frmCancelOrder.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmComposeEmail.resx">
+      <DependentUpon>FrmComposeEmail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmConfirmation.resx">
       <DependentUpon>frmConfirmation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmEditUpdate.resx">
       <DependentUpon>frmEditUpdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmEmailClient.resx">
+      <DependentUpon>FrmEmailClient.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmHelp.resx">
       <DependentUpon>frmHelp.cs</DependentUpon>
@@ -181,6 +217,9 @@
     <EmbeddedResource Include="frmPay.resx">
       <DependentUpon>frmPay.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmSavedSearch.resx">
+      <DependentUpon>FrmSavedSearch.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmSearch.resx">
       <DependentUpon>frmSearch.cs</DependentUpon>
     </EmbeddedResource>
@@ -195,6 +234,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateOrder.resx">
       <DependentUpon>frmUpdateOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewEmail.resx">
+      <DependentUpon>FrmViewEmail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmViewInbox.resx">
+      <DependentUpon>FrmViewInbox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="mdiBackend.resx">
       <DependentUpon>mdiBackend.cs</DependentUpon>
@@ -220,6 +265,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\logo.png" />
+    <Content Include="Resources\logosmaller.png" />
+    <Content Include="Resources\small logo%28world%29.png" />
+    <Content Include="Resources\Spinning-Gif.gif" />
+    <Content Include="Resources\Spinning-Gif1.gif" />
+    <Content Include="Resources\spinninggif.gif" />
+    <Content Include="Resources\spinninggif2.gif" />
+    <Content Include="Resources\Untitled-1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
