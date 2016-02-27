@@ -353,6 +353,61 @@ namespace TestEmail
             Assert.IsFalse(OK);
         }
 
+        [TestMethod]
+        public void EmailContentOK()
+        {
+            //create an instance of the class
+            clsEmail AnEmail = new clsEmail();
+            ///create some test data
+            String testData = "skslskslkslk";
+            //test data to the property
+            AnEmail.EmailContent = testData;
+            //check to see if ok
+            Assert.AreEqual(AnEmail.EmailContent, testData);
+        }
+
+
+        [TestMethod]
+        public void EmailTimeStampOK()
+        {
+            //create an instance of the class
+            clsEmail AnEmail = new clsEmail();
+            ///create some test data (the current date)
+            DateTime testData = DateTime.Now.Date;
+            //test data to the property
+            AnEmail.EmailTimeStamp = testData;
+            //check to see if ok
+            Assert.AreEqual(AnEmail.EmailTimeStamp, testData);
+        }
+
+        [TestMethod]
+        public void EmailSubjectOK()
+        {
+            //create an instance of the class
+            clsEmail AnEmail = new clsEmail();
+            ///create some test data (the current date)
+            String testData = "blahblahblah";
+            //test data to the property
+            AnEmail.EmailSubject = testData;
+            //check to see if ok
+            Assert.AreEqual(AnEmail.EmailSubject, testData);
+        }
+
+
+        [TestMethod]
+        public void EmailFindMethodOK()
+        {
+            //create an instance of the class
+            clsEmail AnEmail = new clsEmail();
+            //boolean var to store result of validation
+            Boolean Found = false;
+            //create some test data
+            Int32 EmailNo = 1;
+            //invoke find method
+            Found = AnEmail.Find(EmailNo);
+            //test to see if result is correct
+            Assert.IsTrue(Found);
+        }
 
     }
 }

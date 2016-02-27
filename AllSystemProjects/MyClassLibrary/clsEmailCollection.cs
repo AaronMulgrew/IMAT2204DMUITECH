@@ -34,6 +34,8 @@ namespace MyClassLibrary
                 AEmail.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
                 //get the primary key
                 AEmail.EmailNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailNo"]);
+                //add the Email to the private data
+                allEmails.Add(AEmail);
                 //add to the index
                 Index++;
             }

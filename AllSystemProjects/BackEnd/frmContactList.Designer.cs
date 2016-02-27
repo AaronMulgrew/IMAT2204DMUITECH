@@ -29,8 +29,10 @@
         private void InitializeComponent()
         {
             this.lblSelectContact = new System.Windows.Forms.Label();
-            this.CboEmail = new System.Windows.Forms.ComboBox();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
+            this.lstBxContacts = new System.Windows.Forms.ListBox();
+            this.btnConfirm = new System.Windows.Forms.Button();
+            this.btnCancel = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSelectContact
@@ -45,13 +47,43 @@
             this.lblSelectContact.TabIndex = 1;
             this.lblSelectContact.Text = "Please Select Your Contacts";
             // 
-            // CboEmail
+            // lstBxContacts
             // 
-            this.CboEmail.FormattingEnabled = true;
-            this.CboEmail.Location = new System.Drawing.Point(117, 201);
-            this.CboEmail.Name = "CboEmail";
-            this.CboEmail.Size = new System.Drawing.Size(121, 33);
-            this.CboEmail.TabIndex = 2;
+            this.lstBxContacts.FormattingEnabled = true;
+            this.lstBxContacts.ItemHeight = 25;
+            this.lstBxContacts.Location = new System.Drawing.Point(117, 197);
+            this.lstBxContacts.Name = "lstBxContacts";
+            this.lstBxContacts.SelectionMode = System.Windows.Forms.SelectionMode.MultiSimple;
+            this.lstBxContacts.Size = new System.Drawing.Size(369, 204);
+            this.lstBxContacts.TabIndex = 3;
+            // 
+            // btnConfirm
+            // 
+            this.btnConfirm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
+            this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnConfirm.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnConfirm.Location = new System.Drawing.Point(290, 625);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnConfirm.Name = "btnConfirm";
+            this.btnConfirm.Size = new System.Drawing.Size(196, 94);
+            this.btnConfirm.TabIndex = 4;
+            this.btnConfirm.Text = "Confirm";
+            this.btnConfirm.UseVisualStyleBackColor = false;
+            this.btnConfirm.Click += new System.EventHandler(this.btnConfirm_Click);
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
+            this.btnCancel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
+            this.btnCancel.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnCancel.Location = new System.Drawing.Point(532, 625);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Size = new System.Drawing.Size(196, 94);
+            this.btnCancel.TabIndex = 5;
+            this.btnCancel.Text = "Cancel";
+            this.btnCancel.UseVisualStyleBackColor = false;
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
             // 
             // frmContactList
             // 
@@ -59,7 +91,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(736, 774);
-            this.Controls.Add(this.CboEmail);
+            this.Controls.Add(this.btnCancel);
+            this.Controls.Add(this.btnConfirm);
+            this.Controls.Add(this.lstBxContacts);
             this.Controls.Add(this.lblSelectContact);
             this.Name = "frmContactList";
             this.Text = "frmContactList";
@@ -72,7 +106,9 @@
         #endregion
 
         private System.Windows.Forms.Label lblSelectContact;
-        private System.Windows.Forms.ComboBox CboEmail;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
+        private System.Windows.Forms.ListBox lstBxContacts;
+        private System.Windows.Forms.Button btnConfirm;
+        private System.Windows.Forms.Button btnCancel;
     }
 }

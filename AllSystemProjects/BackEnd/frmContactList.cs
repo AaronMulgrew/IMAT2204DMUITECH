@@ -29,12 +29,23 @@ namespace BackEnd
             //create instance of the EmailCollection
             clsEmailCollection Emails = new clsEmailCollection();
             //set the data source to the list of emails in the collection class
-            CboEmail.DataSource = Emails.AllEmails;
+            lstBxContacts.DataSource = Emails.AllEmails;
             //set the data field to display
-            CboEmail.DisplayMember = "EmailAddress".ToString();
+            lstBxContacts.DisplayMember = "EmailAddress".ToString();
             //set the name of the primary key
-            CboEmail.ValueMember = "EmailNo";
+            lstBxContacts.ValueMember = "EmailNo";
 
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void btnConfirm_Click(object sender, EventArgs e)
+        {
+            //code will go here
+            Close();
         }
     }
 }

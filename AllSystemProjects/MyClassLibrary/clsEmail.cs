@@ -100,5 +100,17 @@ namespace MyClassLibrary
             }
             return true;
         }
+
+        public string EmailContent { get; set; }
+
+        public DateTime EmailTimeStamp { get; set; }
+
+        public string EmailSubject { get; set; }
+
+        public bool Find(int EmailNo)
+        {
+            //always return true
+            return true;
+        }
     }
 }
