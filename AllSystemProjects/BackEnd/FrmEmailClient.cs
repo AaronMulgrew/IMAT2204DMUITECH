@@ -87,7 +87,7 @@ namespace BackOffice
         {
             //this shows the frmViewInbox form
 
-            FrmViewInbox NewViewInbox = new FrmViewInbox();
+            frmViewInbox NewViewInbox = new frmViewInbox();
             NewViewInbox.Show();
 
             this.Close();

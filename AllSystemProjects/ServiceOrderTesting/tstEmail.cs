@@ -43,16 +43,16 @@ namespace TestEmail
         }
 
         [TestMethod]
-        public void EmailNoOK()
+        public void EmailAddressNoOK()
         {
             //instance of clsEmail
             clsEmail AEmail = new clsEmail();
             //test data to the property
-            Int32 SomeEmailNo = 1;
+            Int32 SomeEmailAddressNo = 1;
             //assign the data to the property
-            AEmail.EmailNo = SomeEmailNo;
+            AEmail.EmailAddressNo = SomeEmailAddressNo;
             //test the data to see the two are equal
-            Assert.AreEqual(AEmail.EmailNo, SomeEmailNo);
+            Assert.AreEqual(AEmail.EmailAddressNo, SomeEmailAddressNo);
         }
 
         [TestMethod]

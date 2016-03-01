@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyClassLibrary;
+using BackOffice;
 
 
 namespace BackEnd
@@ -27,13 +28,13 @@ namespace BackEnd
         void DisplayEmails()
         {
             //create instance of the EmailCollection
-            clsEmailCollection Emails = new clsEmailCollection();
+            clsEmailAddressCollection Emails = new clsEmailAddressCollection();
             //set the data source to the list of emails in the collection class
-            lstBxContacts.DataSource = Emails.AllEmails;
+            lstBxContacts.DataSource = Emails.AllEmailAddresses;
             //set the data field to display
             lstBxContacts.DisplayMember = "EmailAddress".ToString();
             //set the name of the primary key
-            lstBxContacts.ValueMember = "EmailNo";
+            lstBxContacts.ValueMember = "EmailAddressNo";
 
         }
 
@@ -44,8 +45,8 @@ namespace BackEnd
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //code will go here
-            Close();
+            frmViewInbox form = new frmViewInbox();
+            form.Show();
         }
     }
 }

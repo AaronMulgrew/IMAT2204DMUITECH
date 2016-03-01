@@ -12,7 +12,7 @@ namespace ServiceOrderTesting
         public void EmailCollectionInstanceOK()
         {
             //create instance of the class 
-            clsEmailCollection AllEmails = new clsEmailCollection();
+            clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
             //check to see exists
             Assert.IsNotNull(AllEmails);
         }
@@ -21,54 +21,54 @@ namespace ServiceOrderTesting
         public void CountEmailPropertyOK()
         {
             //create instance of the class
-            clsEmailCollection AllEmails = new clsEmailCollection();
+            clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
             //count some database data
             Int32 SomeCount = 7;
             //assign the data
-            AllEmails.Count = SomeCount;
+            AllEmails.CountEmailAddresses = SomeCount;
             //test to see if equal
-            Assert.AreEqual(AllEmails.Count, SomeCount);
+            Assert.AreEqual(AllEmails.CountEmailAddresses, SomeCount);
         }
 
         [TestMethod]
         public void AllEmailsOK()
         {
             //create instance of the class
-            clsEmailCollection Emails = new clsEmailCollection();
+            clsEmailAddressCollection Emails = new clsEmailAddressCollection();
             //create some test data
             List<clsEmail> TestList = new List<clsEmail>();
             //add an item to the list
             clsEmail TestItem = new clsEmail();
             //set the properties
-            TestItem.EmailNo = 1;
+            TestItem.EmailAddressNo = 1;
             TestItem.EmailAddress = "mulgrewaaron1@gmail.com";
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data
-            Emails.AllEmails = TestList;
+            Emails.AllEmailAddresses = TestList;
             //test to see that the two are the same
-            Assert.AreEqual(Emails.AllEmails, TestList);
+            Assert.AreEqual(Emails.AllEmailAddresses, TestList);
         }
 
 
         [TestMethod]
-        public void CountEmailMatchesList()
+        public void CountEmailAddressMatchesList()
         {
             //create instance of the class
-            clsEmailCollection Emails = new clsEmailCollection();
+            clsEmailAddressCollection Emails = new clsEmailAddressCollection();
             //create some test data
             List<clsEmail> TestList = new List<clsEmail>();
             //add an item to the list
             clsEmail TestItem = new clsEmail();
             //set the properties
-            TestItem.EmailNo = 1;
+            TestItem.EmailAddressNo = 1;
             TestItem.EmailAddress = "mulgrewaaron1@gmail.com";
             //add the item to the test list
             TestList.Add(TestItem);
             //assign the data
-            Emails.AllEmails = TestList;
+            Emails.AllEmailAddresses = TestList;
             //test to see that the two are the same
-            Assert.AreEqual(Emails.Count, TestList.Count);
+            Assert.AreEqual(Emails.CountEmailAddresses, TestList.Count);
         }
 
         //[TestMethod]
