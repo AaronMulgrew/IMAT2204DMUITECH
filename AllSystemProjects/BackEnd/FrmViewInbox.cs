@@ -36,7 +36,7 @@ namespace BackOffice
             clsEmailCollection Emails = new clsEmailCollection();
             //set the data source to the list of emails in the collection class
             dataGridViewInbox.DataSource = Emails.AllEmails;
-
+            
             //hide the emailTimeStamp
             dataGridViewInbox.Columns["EmailTimeStamp"].Visible = false;
             //hide the Email Content, this is for the viewEmail page

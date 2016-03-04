@@ -8,7 +8,18 @@ namespace MyClassLibrary
     public class clsEmail
     {
         //getter and setter
+        //public string EmailAddressFromEmailNo
+        //{
+        //    get
+        //    {
+        //        clsDataConnection DB = new clsDataConnection();
+        //        DB.Execute("sproc_tblEmailAddress_GetEmailAddress");
+        //        return EmailAddressFromEmailNo;
+        //    }
+        //}
+
         public string EmailAddress { get; set; }
+
 
         //getter and setter
         public int EmailAddressNo { get; set; }

@@ -81,7 +81,7 @@ namespace MyClassLibrary
         //private data member for the allemailAddresses list
         private List<clsEmail> allEmailAddresses = new List<clsEmail>();
 
-        //public constructor
+        ////public constructor
         public clsEmailAddressCollection()
         {
             //instance of the database connection class
@@ -96,13 +96,13 @@ namespace MyClassLibrary
             while (Index < RecordCount)
             {
                 //create a new instance of the email class
-                clsEmail AEmail = new clsEmail();
+                clsEmail AEmailAddress = new clsEmail();
                 //get the email name
-                AEmail.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
+                AEmailAddress.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
                 //get the primary key
-                AEmail.EmailAddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailAddressNo"]);
+                AEmailAddress.EmailAddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailAddressNo"]);
                 //add the Email to the private data
-                allEmailAddresses.Add(AEmail);
+                allEmailAddresses.Add(AEmailAddress);
                 //add to the index
                 Index++;
             }
