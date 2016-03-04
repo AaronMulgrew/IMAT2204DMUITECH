@@ -30,11 +30,21 @@ namespace BackOffice
 
         private void FrmViewInbox_Load(object sender, EventArgs e)
         {
+            //set auto-generate to false
+            //dataGridViewInbox.AutoGenerateColumns = false;
             //create instance of the EmailCollection
             clsEmailCollection Emails = new clsEmailCollection();
             //set the data source to the list of emails in the collection class
             dataGridViewInbox.DataSource = Emails.AllEmails;
 
+            //hide the emailTimeStamp
+            dataGridViewInbox.Columns["EmailTimeStamp"].Visible = false;
+            //hide the Email Content, this is for the viewEmail page
+            dataGridViewInbox.Columns["EmailContent"].Visible = false;
+            //hide the emailNo
+            dataGridViewInbox.Columns["EmailNo"].Visible = false;
+            //hide the emailAddressNo
+            dataGridViewInbox.Columns["EmailAddressNo"].Visible = false;
 
         }
 

@@ -13,6 +13,8 @@ namespace MyClassLibrary
         //getter and setter
         public int EmailAddressNo { get; set; }
 
+        //getter and setter
+        public int EmailNo { get; set; }
 
         //valid function
         public bool Valid(string EmailAddress)
@@ -83,9 +85,6 @@ namespace MyClassLibrary
 
         }
 
-        //get the timestamp
-        public DateTime TimeStamp { get; set; }
-
         public bool EmailSubjectValid(string EmailSubject)
         {
             //if the email subject is less than three
@@ -109,7 +108,7 @@ namespace MyClassLibrary
 
         public bool Find(int EmailNo)
         {
-            //always return true
+            //always return true for now
             return true;
         }
     }

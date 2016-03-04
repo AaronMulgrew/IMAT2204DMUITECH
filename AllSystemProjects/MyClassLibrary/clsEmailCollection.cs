@@ -11,6 +11,37 @@ namespace MyClassLibrary
         //private data member for the allemailAddresses list
         private List<clsEmail> allEmails = new List<clsEmail>();
 
+        //public constructor
+        public clsEmailCollection()
+        {
+            //instance of the database connection class
+            clsDataConnection DB = new clsDataConnection();
+            //exectue the stored procedure
+            DB.Execute("sproc_tblEmail_SelectAll");
+            //get the count
+            Int32 RecordCount = DB.Count;
+            //set up index for the loop
+            Int32 Index = 0;
+            //while there are records to process
+            while (Index < RecordCount)
+            {
+                //create a new instance of the email class
+                clsEmail AEmail = new clsEmail();
+                //get the email subject
+                AEmail.EmailSubject = DB.DataTable.Rows[Index]["EmailSubject"].ToString();
+                //get the primary key
+                AEmail.EmailNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailNo"]);
+                //get the email Content
+                AEmail.EmailContent = DB.DataTable.Rows[Index]["EmailContent"].ToString();
+                //get the email address recieving
+                AEmail.EmailAddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailAddressNo"]);
+                //add the Email to the private data
+                allEmails.Add(AEmail);
+                //add to the index
+                Index++;
+            }
+        }
+
 
         public List<clsEmail> AllEmails
         {
@@ -39,7 +70,6 @@ namespace MyClassLibrary
             }
         }
 
-
     }
 
 
@@ -47,7 +77,6 @@ namespace MyClassLibrary
 
     public class clsEmailAddressCollection
     {
-
 
         //private data member for the allemailAddresses list
         private List<clsEmail> allEmailAddresses = new List<clsEmail>();

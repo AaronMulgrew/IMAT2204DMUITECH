@@ -31,9 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmViewInbox));
             this.dataGridViewInbox = new System.Windows.Forms.DataGridView();
-            this.From = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Subject = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.DateSent = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.lblInbox = new System.Windows.Forms.Label();
             this.btnShowMoreEmails = new System.Windows.Forms.Button();
             this.btnViewEmail = new System.Windows.Forms.Button();
@@ -41,7 +38,13 @@
             this.btnArchiveEmail = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.timerLoading = new System.Windows.Forms.Timer(this.components);
+            this.clsEmailCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allEmailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.allEmailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInbox)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmailCollectionBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allEmailsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allEmailsBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridViewInbox
@@ -50,31 +53,12 @@
             this.dataGridViewInbox.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCells;
             this.dataGridViewInbox.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
             this.dataGridViewInbox.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewInbox.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.From,
-            this.Subject,
-            this.DateSent});
             this.dataGridViewInbox.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
             this.dataGridViewInbox.Location = new System.Drawing.Point(128, 102);
             this.dataGridViewInbox.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.dataGridViewInbox.Name = "dataGridViewInbox";
             this.dataGridViewInbox.Size = new System.Drawing.Size(1595, 381);
             this.dataGridViewInbox.TabIndex = 0;
-            // 
-            // From
-            // 
-            this.From.HeaderText = "From";
-            this.From.Name = "From";
-            // 
-            // Subject
-            // 
-            this.Subject.HeaderText = "Subject";
-            this.Subject.Name = "Subject";
-            // 
-            // DateSent
-            // 
-            this.DateSent.HeaderText = "DateSent";
-            this.DateSent.Name = "DateSent";
             // 
             // lblInbox
             // 
@@ -159,7 +143,21 @@
             // 
             this.timerLoading.Tick += new System.EventHandler(this.timerLoading_Tick);
             // 
-            // FrmViewInbox
+            // clsEmailCollectionBindingSource
+            // 
+            this.clsEmailCollectionBindingSource.DataSource = typeof(MyClassLibrary.clsEmailCollection);
+            // 
+            // allEmailsBindingSource
+            // 
+            this.allEmailsBindingSource.DataMember = "AllEmails";
+            this.allEmailsBindingSource.DataSource = this.clsEmailCollectionBindingSource;
+            // 
+            // allEmailsBindingSource1
+            // 
+            this.allEmailsBindingSource1.DataMember = "AllEmails";
+            this.allEmailsBindingSource1.DataSource = this.clsEmailCollectionBindingSource;
+            // 
+            // frmViewInbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -174,10 +172,13 @@
             this.Controls.Add(this.dataGridViewInbox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.Name = "FrmViewInbox";
+            this.Name = "frmViewInbox";
             this.Text = "FrmViewInbox";
             this.Load += new System.EventHandler(this.FrmViewInbox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInbox)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clsEmailCollectionBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allEmailsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.allEmailsBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -186,9 +187,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridViewInbox;
-        private System.Windows.Forms.DataGridViewTextBoxColumn From;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Subject;
-        private System.Windows.Forms.DataGridViewTextBoxColumn DateSent;
         private System.Windows.Forms.Label lblInbox;
         private System.Windows.Forms.Button btnShowMoreEmails;
         private System.Windows.Forms.Button btnViewEmail;
@@ -196,5 +194,8 @@
         private System.Windows.Forms.Button btnArchiveEmail;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Timer timerLoading;
+        private System.Windows.Forms.BindingSource allEmailsBindingSource;
+        private System.Windows.Forms.BindingSource clsEmailCollectionBindingSource;
+        private System.Windows.Forms.BindingSource allEmailsBindingSource1;
     }
 }
