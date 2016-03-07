@@ -45,38 +45,40 @@ namespace ServiceOrderTesting
             Assert.IsNotNull(AllCounties);
         }
 
-        [TestMethod]
+       [TestMethod]
         public void CountPropertyOK()
         {
-            //create instance of class we want to create
+           //create instance of class we want to create
             clsServiceOrderCollection AllOrders = new clsServiceOrderCollection();
-            //create some test data to assign to the property
-            Int32 SomeCount = 0;
-            //assign data to the property
-            AllOrders.Count = SomeCount;
-            //test to see that the two values are the same
-            Assert.AreEqual(AllOrders.Count, SomeCount);
+           //create some test data to assign to the property
+            Int32 SomeOrder = 1;
+           //assign data to the property
+            AllOrders.Count = SomeOrder;
+           //test to see that the 2 values are same
+            Assert.AreEqual(AllOrders.Count, SomeOrder);
         }
         [TestMethod]
-        public void OrderListOK()
-        {
-            //create instance of the class we want to create
-            clsServiceOrderCollection Orders = new clsServiceOrderCollection();
-            //create some test data to assign to the property
-            //in this case the data needs to be a list of objects
-            List<clsServiceOrder> TestList = new List<clsServiceOrder>();
+        public void AllOrdersOK()
+       {
+            //create instance of class we want to create
+           clsServiceOrderCollection Orders = new clsServiceOrderCollection();
+            //create some test data to assign to property
+            //the data needs to be a list of objects in this case
+           List<clsServiceOrder> TestList = new List<clsServiceOrder>();
             //add an item to the list
-            //create the item of test data
-            clsServiceOrder TestItem = new clsServiceOrder();
+            //create item of test data
+           clsServiceOrder TestItem = new clsServiceOrder();
             //set its properties
-            TestItem.OrderNo = 1;
-            TestItem.Service = "Antivirus";
-            //add item to test list
-            TestList.Add(TestItem);
-            //assign data to property
-            Orders.AllOrders = TestList;
+           TestItem.OrderNo = 1;
+           TestItem.Service = "Antivirus";
+            //add item to the test list
+           TestList.Add(TestItem);
+            //assign data to the property
+           Orders.AllOrders = TestList;
             //test to see that the two values are the same
-            Assert.AreEqual(Orders.Count, TestList.Count);
-        }
+           Assert.AreEqual(Orders.AllOrders, TestList);
+       }
+
+    
     }
 }
