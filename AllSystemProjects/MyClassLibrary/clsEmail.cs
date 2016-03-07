@@ -27,9 +27,6 @@ namespace MyClassLibrary
         //getter and setter
         public int EmailNo { get; set; }
 
-        //getter and setter
-        public DateTime TimeStamp { get; set; }
-
         //valid function
         public bool Valid(string EmailAddress)
         {
