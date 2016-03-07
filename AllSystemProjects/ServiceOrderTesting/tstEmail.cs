@@ -24,9 +24,9 @@ namespace TestEmail
             //put in some test data
             DateTime TestData = new DateTime(25 / 07 / 2012);
             //assign the data to the property
-            TestEmail.TimeStamp = TestData;
+            TestEmail.EmailTimeStamp = TestData;
             //check to see the data is equal
-            Assert.AreEqual(TestEmail.TimeStamp, TestData);
+            Assert.AreEqual(TestEmail.EmailTimeStamp, TestData);
         }
 
         [TestMethod]
