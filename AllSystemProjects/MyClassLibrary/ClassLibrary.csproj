@@ -45,6 +45,7 @@
     <Compile Include="clsEmailCollection.cs" />
     <Compile Include="clsInvoice.cs" />
     <Compile Include="clsServiceOrder.cs" />
+    <Compile Include="clsServiceOrderCollection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

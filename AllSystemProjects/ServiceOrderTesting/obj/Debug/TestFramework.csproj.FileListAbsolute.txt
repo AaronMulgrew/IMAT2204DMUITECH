@@ -5,3 +5,5 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesti
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll

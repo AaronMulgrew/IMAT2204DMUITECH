@@ -55,6 +55,7 @@
     <Compile Include="tstEmailCollection.cs" />
     <Compile Include="tstInvoice.cs" />
     <Compile Include="tstServiceOrder.cs" />
+    <Compile Include="tstServiceOrderCollection.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MyClassLibrary\ClassLibrary.csproj">

@@ -3,3 +3,8 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\bi
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
