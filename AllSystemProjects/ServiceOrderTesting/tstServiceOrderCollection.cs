@@ -51,7 +51,7 @@ namespace ServiceOrderTesting
            //create instance of class we want to create
             clsServiceOrderCollection AllOrders = new clsServiceOrderCollection();
            //create some test data to assign to the property
-            Int32 SomeOrder = 1;
+            Int32 SomeOrder = 2;
            //assign data to the property
             AllOrders.Count = SomeOrder;
            //test to see that the 2 values are same
@@ -69,7 +69,7 @@ namespace ServiceOrderTesting
             //create item of test data
            clsServiceOrder TestItem = new clsServiceOrder();
             //set its properties
-           TestItem.OrderNo = 1;
+           TestItem.OrderNo = 0;
            TestItem.Service = "Antivirus";
             //add item to the test list
            TestList.Add(TestItem);
@@ -78,7 +78,35 @@ namespace ServiceOrderTesting
             //test to see that the two values are the same
            Assert.AreEqual(Orders.AllOrders, TestList);
        }
-
-    
+        [TestMethod]
+        public void CountMatchesList()
+        {
+            //create instance of class we want to create
+            clsServiceOrderCollection Orders = new clsServiceOrderCollection();
+            //create some test data to assign to the property
+            //in this case the data needs to be list of objects
+            List<clsServiceOrder> TestList = new List<clsServiceOrder>();
+            //add an item to the list
+            //create the item of test data
+            clsServiceOrder TestItem = new clsServiceOrder();
+            //set its properties
+            TestItem.OrderNo = 1;
+            TestItem.Service = "Antivirus";
+            //add item to test list
+            TestList.Add(TestItem);
+            //assign data to property
+            Orders.AllOrders = TestList;
+            //test to see that the 2 values are same
+            Assert.AreEqual(Orders.Count, TestList.Count);
+        }
+        //test to see if orders are already present in class when we create instance of it
+        [TestMethod]
+        public void TwoOrdersPresent()
+        {
+            //create instance of class we want to create
+            clsServiceOrderCollection Orders = new clsServiceOrderCollection();
+            //test to see that the two values are the same
+            Assert.AreEqual(Orders.Count, 2);
+        }
     }
 }
