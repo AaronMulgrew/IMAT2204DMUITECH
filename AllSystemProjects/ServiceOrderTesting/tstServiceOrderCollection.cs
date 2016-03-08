@@ -51,7 +51,7 @@ namespace ServiceOrderTesting
            //create instance of class we want to create
             clsServiceOrderCollection AllOrders = new clsServiceOrderCollection();
            //create some test data to assign to the property
-            Int32 SomeOrder = 2;
+            Int32 SomeOrder = 14;
            //assign data to the property
             AllOrders.Count = SomeOrder;
            //test to see that the 2 values are same
@@ -99,7 +99,8 @@ namespace ServiceOrderTesting
             //test to see that the 2 values are same
             Assert.AreEqual(Orders.Count, TestList.Count);
         }
-        //test to see if orders are already present in class when we create instance of it
+        //The following test has become redundant
+       /* //test to see if orders are already present in class when we create instance of it
         [TestMethod]
         public void TwoOrdersPresent()
         {
@@ -107,6 +108,6 @@ namespace ServiceOrderTesting
             clsServiceOrderCollection Orders = new clsServiceOrderCollection();
             //test to see that the two values are the same
             Assert.AreEqual(Orders.Count, 2);
-        }
+        }*/
     }
 }

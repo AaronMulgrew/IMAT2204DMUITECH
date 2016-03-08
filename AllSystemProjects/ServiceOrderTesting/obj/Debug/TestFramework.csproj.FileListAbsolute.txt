@@ -12,3 +12,10 @@ C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderT
 C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
 C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
 C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
