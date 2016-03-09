@@ -19,8 +19,6 @@
             <asp:Label ID="lblService" runat="server" Font-Names="Microsoft Sans Serif" Font-Size="X-Large" Height="15px" Text="*Service:"></asp:Label>
             &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
             <asp:DropDownList ID="ddlService" runat="server" Height="23px" Width="130px" OnSelectedIndexChanged="ddlService_SelectedIndexChanged">
-                <asp:ListItem>Monitor Problem</asp:ListItem>
-                <asp:ListItem>Broken Fan</asp:ListItem>
             </asp:DropDownList>
         </div>
         <br />

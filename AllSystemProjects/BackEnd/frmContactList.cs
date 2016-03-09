@@ -48,5 +48,10 @@ namespace BackEnd
             frmViewInbox form = new frmViewInbox();
             form.Show();
         }
+
+        private void lstBxContacts_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
