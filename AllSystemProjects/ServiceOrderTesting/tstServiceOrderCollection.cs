@@ -51,11 +51,11 @@ namespace ServiceOrderTesting
            //create instance of class we want to create
             clsServiceOrderCollection AllOrders = new clsServiceOrderCollection();
            //create some test data to assign to the property
-            Int32 SomeOrder = 14;
+            Int32 SomeCount = 14;
            //assign data to the property
-            AllOrders.Count = SomeOrder;
+            AllOrders.Count = SomeCount;
            //test to see that the 2 values are same
-            Assert.AreEqual(AllOrders.Count, SomeOrder);
+            Assert.AreEqual(AllOrders.Count, SomeCount);
         }
         [TestMethod]
         public void AllOrdersOK()

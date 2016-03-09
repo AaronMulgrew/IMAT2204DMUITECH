@@ -54,7 +54,8 @@ namespace MyClassLibrary
         //private data member for allOrders list
         public List<clsServiceOrder> allOrders;
         //public property for Count
-        public int Count
+       
+     public int Count
         {
             get
             {
