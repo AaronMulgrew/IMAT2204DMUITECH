@@ -35,5 +35,11 @@ namespace MyClassLibrary
         {
             return true;
         }
+
+        public bool Find(int OrderNo)
+        {
+            //always return true;
+            return true;
+        }
     }
 }

@@ -306,10 +306,19 @@ namespace ServiceOrderTesting
             //test to see if result is ok
             Assert.IsTrue(OK);
         }
-        [TestMethod]
-        public void AllOrdersOK()
+       [TestMethod]
+        public void FinMethodOK()
         {
-
+           //create instance of class we want to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+           //boolean var to store result of validation
+            Boolean Found = false;
+           //create test data to use with the method
+            Int32 OrderNo = 1;
+           //invoke method
+            Found = AnOrder.Find(OrderNo);
+           //test to see that result is correcrt
+            Assert.IsTrue(Found);
         }
        
      }
