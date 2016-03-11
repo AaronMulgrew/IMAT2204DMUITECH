@@ -307,7 +307,7 @@ namespace ServiceOrderTesting
             Assert.IsTrue(OK);
         }
        [TestMethod]
-        public void FinMethodOK()
+        public void FindMethodOK()
         {
            //create instance of class we want to create
             clsServiceOrder AnOrder = new clsServiceOrder();
@@ -321,5 +321,26 @@ namespace ServiceOrderTesting
             Assert.IsTrue(Found);
         }
        
+        [TestMethod]
+        public void TestOrderNoFound()
+       {
+            //create instance of class we want  to create
+           clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean variable to store result of search
+           Boolean Found = false;
+            //bolean var to record if data is ok (assume it is)
+           Boolean OK = true;
+            //create some test data to use with the method
+           Int32 OrderNo = 21;
+            //invoke the method
+           Found = AnOrder.Find(OrderNo);
+            //check the address no
+            if (AnOrder.OrderNo != 21)
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsTrue(OK);
+       }
      }
 }

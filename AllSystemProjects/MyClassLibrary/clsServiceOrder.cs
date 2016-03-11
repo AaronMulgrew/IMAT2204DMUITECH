@@ -7,9 +7,24 @@ namespace MyClassLibrary
 {
     public class clsServiceOrder
     {
+        //private data member for OrderNo property
+        private Int32 orderNo;
+
         public string Service { get; set; }
 
-        public int OrderNo { get; set; }
+        public int OrderNo
+        {
+            get
+            {
+                //return privaste data
+                return orderNo;
+            }
+            set
+            {
+                //set value of private data memeber
+                orderNo = value;
+            }
+        }
 
         public bool Valid(string SomeService)
         {
@@ -38,6 +53,8 @@ namespace MyClassLibrary
 
         public bool Find(int OrderNo)
         {
+            //set private data member to test data value
+            orderNo = 21;
             //always return true;
             return true;
         }
