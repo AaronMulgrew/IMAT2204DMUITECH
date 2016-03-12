@@ -342,5 +342,26 @@ namespace ServiceOrderTesting
             //test to see that result is correct
             Assert.IsTrue(OK);
        }
+        [TestMethod]
+        public void TestOrderDateFound()
+        {
+            //craete insatcne of class
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //booolean var to store search reuslt
+            Boolean Found = false;
+            //boolean var to record if data is ok
+            Boolean OK = true;
+            //create sime test data to use with method
+            Int32 OrderNo = 21;
+            //invoke merhod
+            Found = AnOrder.Find(OrderNo);
+            //check property
+            if (AnOrder.OrderDate != Convert.ToDateTime("16/03/2016"))
+            {
+                OK = false;
+            }
+            //test to see if result is ok
+            Assert.IsTrue(OK);
+        }
      }
 }

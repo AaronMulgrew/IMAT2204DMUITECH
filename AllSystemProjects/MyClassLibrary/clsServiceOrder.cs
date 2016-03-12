@@ -10,6 +10,8 @@ namespace MyClassLibrary
         //private data member for OrderNo property
         private Int32 orderNo;
 
+        private DateTime orderDate;
+
         public string Service { get; set; }
 
         public int OrderNo
@@ -32,16 +34,16 @@ namespace MyClassLibrary
             //boolean variable indidcates that all is good
             //Boolean OK = true;
             //if name of Service Type is not blank
-            if(SomeService == "")
+            if (SomeService == "")
             {
                 //show error
-                 return false;
+                return false;
             }
-                //if name of service is more than 20 characters
+            //if name of service is more than 20 characters
             if (SomeService.Length > 20)
             {
                 //show error
-               return false;
+                return false;
             }
             return true;
         }
@@ -58,5 +60,21 @@ namespace MyClassLibrary
             //always return true;
             return true;
         }
+
+
+        public DateTime OrderDate
+        {
+            get
+            {
+                //return privaste data
+                return orderDate;
+            }
+            set
+            {
+                //set value of private data memeber
+                orderDate = value;
+            }
+        }
     }
 }
+

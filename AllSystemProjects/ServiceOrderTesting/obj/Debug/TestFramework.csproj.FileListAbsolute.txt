@@ -19,3 +19,10 @@ C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\D
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\ServiceOrderTesting.pdb
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\bin\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\TestFramework.csprojResolveAssemblyReference.cache
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.dll
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\ServiceOrderTesting\obj\Debug\ServiceOrderTesting.pdb

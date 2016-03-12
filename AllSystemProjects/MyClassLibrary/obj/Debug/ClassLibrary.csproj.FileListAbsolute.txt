@@ -13,3 +13,8 @@ C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\MyClassLibrary\bin\Debug\
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
 C:\Users\MTSheikh\Documents\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+C:\Users\MTSheikh\Desktop\IMAT2204\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
