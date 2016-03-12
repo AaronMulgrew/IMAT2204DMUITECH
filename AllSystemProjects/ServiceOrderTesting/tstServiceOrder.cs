@@ -317,7 +317,7 @@ namespace ServiceOrderTesting
             Int32 OrderNo = 1;
            //invoke method
             Found = AnOrder.Find(OrderNo);
-           //test to see that result is correcrt
+           //test to see that result is correcrt and proper
             Assert.IsTrue(Found);
         }
        
