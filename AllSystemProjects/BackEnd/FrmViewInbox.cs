@@ -20,6 +20,9 @@ namespace BackOffice
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
+            FrmViewEmail newEmail = new FrmViewEmail();
+            newEmail.Show();
+
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -36,9 +39,8 @@ namespace BackOffice
             clsEmailCollection Emails = new clsEmailCollection();
             //set the data source to the list of emails in the collection class
             dataGridViewInbox.DataSource = Emails.AllEmails;
-            
             //hide the emailTimeStamp
-            dataGridViewInbox.Columns["EmailTimeStamp"].Visible = false;
+            dataGridViewInbox.Columns["EmailTimeStamp"].Visible = true;
             //hide the Email Content, this is for the viewEmail page
             dataGridViewInbox.Columns["EmailContent"].Visible = false;
             //hide the emailNo

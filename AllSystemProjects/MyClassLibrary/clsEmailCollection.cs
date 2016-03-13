@@ -35,11 +35,26 @@ namespace MyClassLibrary
                 AEmail.EmailContent = DB.DataTable.Rows[Index]["EmailContent"].ToString();
                 //get the email address recieving
                 AEmail.EmailAddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailAddressNo"]);
+                //passess the EmailAddressNo to get the EmailAddress
+                AEmail.EmailAddress = GetEmailAddress(AEmail.EmailAddressNo);
                 //add the Email to the private data
                 allEmails.Add(AEmail);
                 //add to the index
                 Index++;
             }
+        }
+
+        public string GetEmailAddress(Int32 EmailNo)
+        {
+             //instance of the database connection class
+             clsDataConnection DB = new clsDataConnection();
+             //this adds the parameter EmailNo
+             DB.AddParameter("EmailNo", EmailNo);
+             //this executes the stored procedure for the email address
+             DB.Execute("sproc_tblEmailAddress_GetEmailAddress");
+             //this retrieves one email address from the Table "tblEmailAddress", index only needs to be 0
+             string EmailAddress = DB.DataTable.Rows[0]["EmailAddress"].ToString();
+             return EmailAddress;
         }
 
 
@@ -97,7 +112,7 @@ namespace MyClassLibrary
             {
                 //create a new instance of the email class
                 clsEmail AEmailAddress = new clsEmail();
-                //get the email name
+                //get the email Address
                 AEmailAddress.EmailAddress = DB.DataTable.Rows[Index]["EmailAddress"].ToString();
                 //get the primary key
                 AEmailAddress.EmailAddressNo = Convert.ToInt32(DB.DataTable.Rows[Index]["EmailAddressNo"]);
