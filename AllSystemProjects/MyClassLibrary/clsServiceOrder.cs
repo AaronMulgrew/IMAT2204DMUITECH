@@ -10,6 +10,7 @@ namespace MyClassLibrary
         //private data member for OrderNo property
         private Int32 orderNo;
 
+        //private data member for OrderDate property
         private DateTime orderDate;
 
         public string Service { get; set; }
@@ -61,20 +62,20 @@ namespace MyClassLibrary
             return true;
         }
 
-
+        //public proeprtyy for Order Date
         public DateTime OrderDate
         {
             get
             {
-                //return privaste data
+                //return private data
                 return orderDate;
             }
             set
             {
-                //set value of private data memeber
                 orderDate = value;
             }
         }
+        
     }
 }
 

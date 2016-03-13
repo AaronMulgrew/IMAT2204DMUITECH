@@ -345,23 +345,23 @@ namespace ServiceOrderTesting
         [TestMethod]
         public void TestOrderDateFound()
         {
-            //craete insatcne of class
+            //create insatnce of class we want to creaste
             clsServiceOrder AnOrder = new clsServiceOrder();
-            //booolean var to store search reuslt
+            //boolean var to store search reuslt
             Boolean Found = false;
-            //boolean var to record if data is ok
+            //Boolean var to check if data is ok
             Boolean OK = true;
-            //create sime test data to use with method
+            //craete test data to use with method
             Int32 OrderNo = 21;
-            //invoke merhod
+            //invoke method
             Found = AnOrder.Find(OrderNo);
             //check property
-            if (AnOrder.OrderDate != Convert.ToDateTime("16/03/2016"))
+            if (AnOrder.OrderDate != Convert.ToDateTime("13/03/2016"))
             {
                 OK = false;
             }
-            //test to see if result is ok
-            Assert.IsTrue(OK);
+            //test to see that result is correct
+            Assert.IsFalse(OK);
         }
      }
 }
