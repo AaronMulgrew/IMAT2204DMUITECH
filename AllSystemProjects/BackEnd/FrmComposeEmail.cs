@@ -7,8 +7,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net.Mail;
+using System.Net;
 
-namespace BackOffice
+namespace BackEnd
 {
     public partial class FrmComposeEmail : Form
     {
@@ -37,11 +39,10 @@ namespace BackOffice
         /// this is just some dummy data that will be replaced in the full system
         /// </summary>
 
-        public void ReplyEmail()
+        public void ReplyEmail(string EmailAddress)
         {
-            //this is just some dummy data that will be replaced in the full system
-            txtBxTo.Text = "lara11@hotmail.com";
-            lblMainTitle.Text = "New Reply Email";
+            //this loads the email address automatically from the reply email
+            txtBxTo.Text = EmailAddress;
         }
 
         private void FrmComposeEmail_Load(object sender, EventArgs e)
@@ -112,9 +113,39 @@ namespace BackOffice
             {
                 //this is a dummy message, will be replaced by real code
                 //after the Smoke and Mirrors prototype
-                MessageBox.Show("Email Successfully Sent!");
-                //this closes the current form
-                this.Close();
+
+
+                ///Email Address = dmuitech@gmail.com
+                ///Password = DeMonfortUniversity2015
+                ///
+
+                string Username = "dmuitech";
+                string Password = "DeMonfortUniversity2015";
+
+                try
+                {
+                    MailMessage mail = new MailMessage();
+                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+
+                    mail.From = new MailAddress("dmuitech@gmail.com");
+                    mail.To.Add(txtBxTo.Text);
+                    mail.Subject = txtBxSubject.Text;
+                    mail.Body = txtBxMainBody.Text;
+
+                    SmtpServer.Port = 587;
+                    SmtpServer.Credentials = new System.Net.NetworkCredential(Username, Password);
+                    SmtpServer.EnableSsl = true;
+
+                    SmtpServer.Send(mail);
+                    //show the messagebox
+                    MessageBox.Show("Email Successfully Sent!");
+                    //this closes the current form
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.ToString());
+                }
             }
 
 

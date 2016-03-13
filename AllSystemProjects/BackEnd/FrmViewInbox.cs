@@ -9,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BackOffice
+namespace BackEnd
 {
     public partial class frmViewInbox : Form
     {
+        Int32 EmailAddressNo;
         public frmViewInbox()
         {
             InitializeComponent();
@@ -20,9 +21,9 @@ namespace BackOffice
 
         private void btnProceed_Click(object sender, EventArgs e)
         {
-            FrmViewEmail newEmail = new FrmViewEmail();
-            newEmail.Show();
-
+            FrmViewEmail newViewEmail = new FrmViewEmail();
+            newViewEmail.Show();
+            newViewEmail.NewEmail(EmailAddressNo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -33,27 +34,22 @@ namespace BackOffice
 
         private void FrmViewInbox_Load(object sender, EventArgs e)
         {
-            //set auto-generate to false
-            //dataGridViewInbox.AutoGenerateColumns = false;
             //create instance of the EmailCollection
             clsEmailCollection Emails = new clsEmailCollection();
             //set the data source to the list of emails in the collection class
             dataGridViewInbox.DataSource = Emails.AllEmails;
             //hide the emailTimeStamp
-            dataGridViewInbox.Columns["EmailTimeStamp"].Visible = true;
+            dataGridViewInbox.Columns["EmailTimeStamp"].Visible = false;
             //hide the Email Content, this is for the viewEmail page
             dataGridViewInbox.Columns["EmailContent"].Visible = false;
             //hide the emailNo
             dataGridViewInbox.Columns["EmailNo"].Visible = false;
             //hide the emailAddressNo
             dataGridViewInbox.Columns["EmailAddressNo"].Visible = false;
+            //this safeguards us incase somebody clicks the "view email" button before selecting a row
+            Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
+            EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
 
-        }
-
-
-        public void LoadEmailData()
-        {
-            //create instance of the EmailCollection
         }
 
 
@@ -67,6 +63,12 @@ namespace BackOffice
 
         private void timerLoading_Tick(object sender, EventArgs e)
         {
+        }
+
+        private void dataGridViewInbox_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
+            EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
         }
     }
 }

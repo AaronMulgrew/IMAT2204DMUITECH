@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,10 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace BackOffice
+namespace BackEnd
 {
     public partial class FrmViewEmail : Form
     {
+        string EmailAddress;
         public FrmViewEmail()
         {
             InitializeComponent();
@@ -27,29 +29,22 @@ namespace BackOffice
         {
         }
 
-        public void ShowEmail(Int32 SelectedIndex)
-        {
-            //these just put in some dummy data so that the system can be realistically tested
-            if (SelectedIndex == 1)
-            {
-                txtBxFrom.Text = "Lara11@hotmail.co.uk";
-                txtBxSubject.Text = "Refunds";
-                txtBxContent.Text = "Hi I have recently paid for a repair from your business, do you do refunds?";
-            }
-            else if (SelectedIndex == 2)
-            {
-                txtBxFrom.Text = "Lara11@hotmail.co.uk";
-                txtBxSubject.Text = "Enquiry";
-                txtBxContent.Text = "Hi I am interested in a repair, when are you available?";
-            }
-        }
-
         private void btnReply_Click(object sender, EventArgs e)
         {
             //this simply calls the replyemail function within the compose email screen
             FrmComposeEmail EmailClient = new FrmComposeEmail();
-            EmailClient.ReplyEmail();
+            EmailClient.ReplyEmail(EmailAddress);
             EmailClient.Show();
+        }
+
+        //this will be the function that shows the new email and it accepts the emailno selected in 
+        //the datagridview
+        public void NewEmail(int EmailAddressNo)
+        {
+            //txtBxFrom.Text = Convert.ToString(EmailAddressNo);
+            clsEmailCollection AllEmails = new clsEmailCollection();
+            EmailAddress = AllEmails.GetEmailAddress(EmailAddressNo);
+            txtBxFrom.Text = EmailAddress;
         }
     }
 }

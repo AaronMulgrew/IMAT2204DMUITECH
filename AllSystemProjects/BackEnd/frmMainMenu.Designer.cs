@@ -1,4 +1,4 @@
-﻿namespace BackOffice
+﻿namespace BackEnd
 {
     partial class FrmMainMenu
     {

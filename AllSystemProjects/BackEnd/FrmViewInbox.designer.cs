@@ -1,4 +1,4 @@
-﻿namespace BackOffice
+﻿namespace BackEnd
 {
     partial class frmViewInbox
     {
@@ -59,6 +59,7 @@
             this.dataGridViewInbox.Name = "dataGridViewInbox";
             this.dataGridViewInbox.Size = new System.Drawing.Size(1595, 381);
             this.dataGridViewInbox.TabIndex = 0;
+            this.dataGridViewInbox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInbox_CellClick);
             // 
             // lblInbox
             // 
