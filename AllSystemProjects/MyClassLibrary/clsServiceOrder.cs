@@ -19,6 +19,8 @@ namespace MyClassLibrary
         //private data memebr for CustomerNo property
         private Int32 customerNo;
 
+        private Decimal orderPrice;
+
         public int OrderNo
         {
             get
@@ -109,6 +111,19 @@ namespace MyClassLibrary
                 customerNo = value;
             }
         }
+
+        public Decimal OrderPrice
+        {
+            get
+            {
+                //return private daat
+                return orderPrice;
+            }
+            set
+            {
+                orderPrice = value;
+            }
+        }   
     }
 }
 

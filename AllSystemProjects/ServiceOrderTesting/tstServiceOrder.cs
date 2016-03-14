@@ -403,6 +403,28 @@ namespace ServiceOrderTesting
                 OK = false;
             }
             //test to see that result is correct
+            Assert.IsTrue(OK);          
+
+        }
+        [TestMethod]
+        public void TestOrderPriceFound()
+        {
+            //create insatnce of class we want to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //bolean var to record if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 OrderNo = 21;
+            //invoke the method
+            Found = AnOrder.Find(OrderNo);          
+            //chjeck property 
+            if(AnOrder.OrderPrice != 5.0000)
+            {
+                OK = false;
+            }
+            //test to see that result is correct
             Assert.IsTrue(OK);
         }
      }
