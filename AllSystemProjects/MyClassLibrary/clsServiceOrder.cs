@@ -13,7 +13,10 @@ namespace MyClassLibrary
         //private data member for OrderDate property
         private DateTime orderDate;
 
-        public string Service { get; set; }
+        //private data memebr for Service property
+        private string service;
+
+        
 
         public int OrderNo
         {
@@ -61,6 +64,7 @@ namespace MyClassLibrary
             //always return true;
             return true;
         }
+        
 
         //public proeprtyy for Order Date
         public DateTime OrderDate
@@ -73,6 +77,20 @@ namespace MyClassLibrary
             set
             {
                 orderDate = value;
+            }
+        }
+
+        //public property for service
+        public string Service
+        {
+            get
+            {
+                //return private data
+                return service;
+            }
+            set
+            {
+                service = value;
             }
         }
         
