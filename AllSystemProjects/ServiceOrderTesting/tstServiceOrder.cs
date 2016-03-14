@@ -403,7 +403,7 @@ namespace ServiceOrderTesting
                 OK = false;
             }
             //test to see that result is correct
-            Assert.IsTrue(OK);          
+            Assert.IsFalse(OK);          
 
         }
         [TestMethod]
@@ -425,7 +425,7 @@ namespace ServiceOrderTesting
                 OK = false;
             }
             //test to see that result is correct
-            Assert.IsTrue(OK);
+            Assert.IsFalse(OK);
         }
      }
 }

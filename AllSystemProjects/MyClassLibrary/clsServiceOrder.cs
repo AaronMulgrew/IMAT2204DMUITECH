@@ -60,12 +60,34 @@ namespace MyClassLibrary
             return true;
         }
 
+
+
         public bool Find(int OrderNo)
         {
-            //set private data member to test data value
-            orderNo = 21;
-            //always return true;
-            return true;
+            //craetew instance of db connection
+            clsDataConnection DB = new clsDataConnection();
+            //add parameter for Order no to search for
+            DB.AddParameter("@OrderNo", OrderNo);
+            //execute sproc
+            DB.Execute("sproc_tblServiceOrder_FilterByOrderNo");
+            //if one record is found (there shoudl be either one or zero)
+            if (DB.Count == 1)
+            {
+                //copy data from database to private data members
+                orderNo = Convert.ToInt32(DB.DataTable.Rows[0]["OrderNo"]);
+                service = Convert.ToString(DB.DataTable.Rows[0]["Service"]);
+                orderDate = Convert.ToDateTime(DB.DataTable.Rows[0]["OrderDate"]);
+                orderPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["OrderPrice"]);
+                customerNo = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerNo"]);
+                //return that evrything worked ok
+                return true;
+            }
+            //if no record was found
+            else
+            {
+                //return false indicating a problem
+                return false;
+            }
         }
         
 
