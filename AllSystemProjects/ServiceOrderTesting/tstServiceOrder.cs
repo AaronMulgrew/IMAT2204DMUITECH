@@ -52,7 +52,7 @@ namespace ServiceOrderTesting
             //assign the data to the property
             AnOrder.Service = SomeService;
             //test to see if both values are the same
-            Assert.AreEqual(AnOrder.Service, SomeService);
+            Assert.AreEqual(AnOrder.CustomerNo, SomeService);
         }
         [TestMethod]
         public void OrderNoOK()
@@ -383,6 +383,27 @@ namespace ServiceOrderTesting
             }
             //test to see that result is correct
             Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void TestCustomerNoFound()
+        {
+            //create instance of class we want  to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //bolean var to record if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 OrderNo = 21;
+            //invoke the method
+            Found = AnOrder.Find(OrderNo);
+            //check the address no
+            if (AnOrder.CustomerNo != 21)
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsTrue(OK);
         }
      }
 }

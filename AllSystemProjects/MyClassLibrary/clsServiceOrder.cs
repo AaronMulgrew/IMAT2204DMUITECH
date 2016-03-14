@@ -16,7 +16,8 @@ namespace MyClassLibrary
         //private data memebr for Service property
         private string service;
 
-        
+        //private data memebr for CustomerNo property
+        private Int32 customerNo;
 
         public int OrderNo
         {
@@ -90,10 +91,24 @@ namespace MyClassLibrary
             }
             set
             {
-                service = value;
+               service = value;
             }
         }
-        
+
+
+        //public property for customer number
+        public Int32 CustomerNo
+        {
+            get
+            {
+                //return private data
+                return customerNo;
+            }
+            set
+            {
+                customerNo = value;
+            }
+        }
     }
 }
 
