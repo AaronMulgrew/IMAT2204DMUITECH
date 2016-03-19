@@ -169,7 +169,8 @@ namespace BackEnd
 
         private void btnContactList_Click(object sender, EventArgs e)
         {
-
+            frmContactList newcontactlist = new frmContactList();
+            newcontactlist.Show();
         }
     }
 }

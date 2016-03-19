@@ -47,7 +47,7 @@ namespace BackEnd
             //hide the emailAddressNo
             dataGridViewInbox.Columns["EmailAddressNo"].Visible = false;
             //this safeguards us incase somebody clicks the "view email" button before selecting a row
-            Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
+            Int32 SelectedIndex = 1;
             EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
 
         }

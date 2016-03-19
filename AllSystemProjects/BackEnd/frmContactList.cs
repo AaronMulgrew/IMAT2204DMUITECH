@@ -45,8 +45,7 @@ namespace BackEnd
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            frmViewInbox form = new frmViewInbox();
-            form.Show();
+            Close();
         }
 
         private void lstBxContacts_SelectedIndexChanged(object sender, EventArgs e)
