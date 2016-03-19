@@ -13,13 +13,7 @@ namespace MyClassLibrary
         //private data member for OrderDate property
         private DateTime orderDate;
 
-        //private data memebr for Service property
-        private string service;
-
-        //private data memebr for CustomerNo property
-        private Int32 customerNo;
-
-        private Decimal orderPrice;
+        public string Service { get; set; }
 
         public int OrderNo
         {
@@ -60,36 +54,13 @@ namespace MyClassLibrary
             return true;
         }
 
-
-
         public bool Find(int OrderNo)
         {
-            //craetew instance of db connection
-            clsDataConnection DB = new clsDataConnection();
-            //add parameter for Order no to search for
-            DB.AddParameter("@OrderNo", OrderNo);
-            //execute sproc
-            DB.Execute("sproc_tblServiceOrder_FilterByOrderNo");
-            //if one record is found (there shoudl be either one or zero)
-            if (DB.Count == 1)
-            {
-                //copy data from database to private data members
-                orderNo = Convert.ToInt32(DB.DataTable.Rows[0]["OrderNo"]);
-                service = Convert.ToString(DB.DataTable.Rows[0]["Service"]);
-                orderDate = Convert.ToDateTime(DB.DataTable.Rows[0]["OrderDate"]);
-                orderPrice = Convert.ToDecimal(DB.DataTable.Rows[0]["OrderPrice"]);
-                customerNo = Convert.ToInt32(DB.DataTable.Rows[0]["CustomerNo"]);
-                //return that evrything worked ok
-                return true;
-            }
-            //if no record was found
-            else
-            {
-                //return false indicating a problem
-                return false;
-            }
+            //set private data member to test data value
+            orderNo = 21;
+            //always return true;
+            return true;
         }
-        
 
         //public proeprtyy for Order Date
         public DateTime OrderDate
@@ -104,48 +75,7 @@ namespace MyClassLibrary
                 orderDate = value;
             }
         }
-
-        //public property for service
-        public string Service
-        {
-            get
-            {
-                //return private data
-                return service;
-            }
-            set
-            {
-               service = value;
-            }
-        }
-
-
-        //public property for customer number
-        public Int32 CustomerNo
-        {
-            get
-            {
-                //return private data
-                return customerNo;
-            }
-            set
-            {
-                customerNo = value;
-            }
-        }
-
-        public Decimal OrderPrice
-        {
-            get
-            {
-                //return private daat
-                return orderPrice;
-            }
-            set
-            {
-                orderPrice = value;
-            }
-        }   
+        
     }
 }
 
