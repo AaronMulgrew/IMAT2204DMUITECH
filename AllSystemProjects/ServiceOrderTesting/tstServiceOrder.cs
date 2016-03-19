@@ -52,7 +52,7 @@ namespace ServiceOrderTesting
             //assign the data to the property
             AnOrder.Service = SomeService;
             //test to see if both values are the same
-            Assert.AreEqual(AnOrder.Service, SomeService);
+            Assert.AreEqual(AnOrder.CustomerNo, SomeService);
         }
         [TestMethod]
         public void OrderNoOK()
@@ -357,6 +357,70 @@ namespace ServiceOrderTesting
             Found = AnOrder.Find(OrderNo);
             //check property
             if (AnOrder.OrderDate != Convert.ToDateTime("13/03/2016"))
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void TestServiceFound()
+        {
+            //create instance of class we want to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean  var to store result of search
+            Boolean Found = false;
+            //boolean var to record if data is OK
+            Boolean OK = true;
+            //create some test data to use with method
+            Int32 OrderNo = 21;
+            //invoke method
+            Found = AnOrder.Find(OrderNo);
+            //check property
+            if(AnOrder.Service != "Test Service")
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsFalse(OK);
+        }
+        [TestMethod]
+        public void TestCustomerNoFound()
+        {
+            //create instance of class we want  to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //bolean var to record if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 OrderNo = 21;
+            //invoke the method
+            Found = AnOrder.Find(OrderNo);
+            //check the address no
+            if (AnOrder.CustomerNo != 21)
+            {
+                OK = false;
+            }
+            //test to see that result is correct
+            Assert.IsFalse(OK);          
+
+        }
+        [TestMethod]
+        public void TestOrderPriceFound()
+        {
+            //create insatnce of class we want to create
+            clsServiceOrder AnOrder = new clsServiceOrder();
+            //boolean variable to store result of search
+            Boolean Found = false;
+            //bolean var to record if data is ok (assume it is)
+            Boolean OK = true;
+            //create some test data to use with the method
+            Int32 OrderNo = 21;
+            //invoke the method
+            Found = AnOrder.Find(OrderNo);          
+            //chjeck property 
+            if(AnOrder.OrderPrice != 5.0000)
             {
                 OK = false;
             }
