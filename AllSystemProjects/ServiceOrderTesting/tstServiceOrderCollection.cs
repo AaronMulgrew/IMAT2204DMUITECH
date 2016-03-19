@@ -70,7 +70,7 @@ namespace ServiceOrderTesting
            clsServiceOrder TestItem = new clsServiceOrder();
             //set its properties
            TestItem.OrderNo = 0;
-           TestItem.Service = "Antivirus";
+           TestItem.CustomerNo = 123;
             //add item to the test list
            TestList.Add(TestItem);
             //assign data to the property
@@ -91,7 +91,7 @@ namespace ServiceOrderTesting
             clsServiceOrder TestItem = new clsServiceOrder();
             //set its properties
             TestItem.OrderNo = 1;
-            TestItem.Service = "Antivirus";
+            TestItem.CustomerNo = 123;
             //add item to test list
             TestList.Add(TestItem);
             //assign data to property
