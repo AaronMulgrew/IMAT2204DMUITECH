@@ -342,3 +342,7 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debu
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe.config
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe.manifest
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\bin\Debug\BackEnd.application
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe.manifest
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debug\BackEnd.application
