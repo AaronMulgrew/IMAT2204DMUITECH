@@ -46,7 +46,9 @@ namespace BackEnd
         private void btnConfirm_Click(object sender, EventArgs e)
         {
             //a bit of linq to convert the lstbxcontacts to a generic list
-            List<string> EmailAddresses = lstBxContacts.Items.OfType<string>().ToList();
+            ///FIXTHISBITTTTTT
+            List<string> EmailAddresses = lstBxContacts.SelectedItems.OfType<string>().ToList();
+
             //instantiation of the frmcomposemail form
             FrmComposeEmail SendAddresses = new FrmComposeEmail();
             SendAddresses.AcceptEmails(EmailAddresses);

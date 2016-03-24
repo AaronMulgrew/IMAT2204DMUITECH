@@ -58,7 +58,8 @@ namespace BackEnd
         public void AcceptEmails(List<string>EmailAddresses)
         {
             //this accepts the generic list and converts it to string
-            txtBxTo.Text = Convert.ToString(EmailAddresses);
+            string EmailAddressList = string.Join(",", EmailAddresses.ToArray());
+            txtBxTo.Text = EmailAddressList;
         }
 
         private void buttonSend_Click(object sender, EventArgs e)
