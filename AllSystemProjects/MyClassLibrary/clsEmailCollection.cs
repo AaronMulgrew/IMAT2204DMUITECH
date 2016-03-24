@@ -57,7 +57,7 @@ namespace MyClassLibrary
              return EmailAddress;
         }
 
-        public string GetOneEmail(Int32 EmailNo)
+        public void GetOneEmail(Int32 EmailNo, out string EmailSubject, out string EmailContent)
         {
             //instance of the database connection class
             clsDataConnection DB = new clsDataConnection();
@@ -66,10 +66,9 @@ namespace MyClassLibrary
             //this executes the stored procedure for the email address
             DB.Execute("sproc_tblEmail_GetEmail");
             //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
-            string EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
+            EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
             //FIX THISSSSSSISISISISSISSSISIISIS
-            string EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
-            return EmailContent;
+            EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
         }
 
         public List<clsEmail> AllEmails

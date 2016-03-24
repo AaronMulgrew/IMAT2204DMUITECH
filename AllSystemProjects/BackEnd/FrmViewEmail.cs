@@ -41,12 +41,15 @@ namespace BackEnd
         //the datagridview
         public void NewEmail(int EmailAddressNo, int EmailNo)
         {
+            string EmailSubject;
+            string EmailContent;
             //txtBxFrom.Text = Convert.ToString(EmailAddressNo);
             clsEmail OneEmail = new clsEmail();
             clsEmailCollection AllEmails = new clsEmailCollection();
             EmailAddress = AllEmails.GetEmailAddress(EmailAddressNo);
-            txtBxSubject.Text = AllEmails.GetOneEmail(EmailNo);
-            txtBxContent.Text = AllEmails.GetOneEmail(EmailNo);
+            AllEmails.GetOneEmail(EmailNo, out EmailSubject, out EmailContent);
+            txtBxSubject.Text = EmailSubject;
+            txtBxContent.Text = EmailContent;
             txtBxFrom.Text = EmailAddress;
         }
     }
