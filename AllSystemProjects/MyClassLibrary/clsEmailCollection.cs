@@ -44,12 +44,12 @@ namespace MyClassLibrary
             }
         }
 
-        public string GetEmailAddress(Int32 EmailNo)
+        public string GetEmailAddress(Int32 EmailAddressNo)
         {
              //instance of the database connection class
              clsDataConnection DB = new clsDataConnection();
-             //this adds the parameter EmailNo
-             DB.AddParameter("EmailNo", EmailNo);
+             //this adds the parameter EmailAddressNo
+             DB.AddParameter("EmailNo", EmailAddressNo);
              //this executes the stored procedure for the email address
              DB.Execute("sproc_tblEmailAddress_GetEmailAddress");
              //this retrieves one email address from the Table "tblEmailAddress", index only needs to be 0
@@ -57,6 +57,20 @@ namespace MyClassLibrary
              return EmailAddress;
         }
 
+        public string GetOneEmail(Int32 EmailNo)
+        {
+            //instance of the database connection class
+            clsDataConnection DB = new clsDataConnection();
+            //this adds the parameter EmailNo
+            DB.AddParameter("EmailNo", EmailNo);
+            //this executes the stored procedure for the email address
+            DB.Execute("sproc_tblEmail_GetEmail");
+            //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
+            string EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
+            //FIX THISSSSSSISISISISSISSSISIISIS
+            string EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
+            return EmailContent;
+        }
 
         public List<clsEmail> AllEmails
         {
