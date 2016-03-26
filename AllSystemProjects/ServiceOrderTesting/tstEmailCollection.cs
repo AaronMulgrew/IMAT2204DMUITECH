@@ -17,13 +17,27 @@ namespace ServiceOrderTesting
             Assert.IsNotNull(AllEmails);
         }
 
+
+        [TestMethod]
+        public void GetEmailAddressOK()
+        {
+            //create instance of the class
+            clsEmailCollection AllEmails = new clsEmailCollection();
+            string LocalEmailAddress = "mulgrewaaron1@gmail.com";
+            //check to see if it works ok
+            string DatabaseEmailAdddress = AllEmails.GetEmailAddress(1);
+
+            Assert.AreEqual(LocalEmailAddress, DatabaseEmailAdddress);
+
+        }
+
         [TestMethod]
         public void CountEmailPropertyOK()
         {
             //create instance of the class
             clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
             //count some database data
-            Int32 SomeCount = 7;
+            Int32 SomeCount = 4;
             //assign the data
             AllEmails.CountEmailAddresses = SomeCount;
             //test to see if equal

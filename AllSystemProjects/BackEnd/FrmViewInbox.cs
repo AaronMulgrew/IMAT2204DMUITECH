@@ -13,7 +13,8 @@ namespace BackEnd
 {
     public partial class frmViewInbox : Form
     {
-        Int32 EmailAddressNo;
+        Int32 EmailAddressNo = 0;
+        Int32 EmailNo = 0;
         public frmViewInbox()
         {
             InitializeComponent();
@@ -23,7 +24,7 @@ namespace BackEnd
         {
             FrmViewEmail newViewEmail = new FrmViewEmail();
             newViewEmail.Show();
-            newViewEmail.NewEmail(EmailAddressNo);
+            newViewEmail.NewEmail(EmailAddressNo, EmailNo);
         }
 
         private void btnClose_Click(object sender, EventArgs e)
@@ -44,10 +45,14 @@ namespace BackEnd
             dataGridViewInbox.Columns["EmailContent"].Visible = false;
             //hide the emailNo
             dataGridViewInbox.Columns["EmailNo"].Visible = false;
+
             //hide the emailAddressNo
             dataGridViewInbox.Columns["EmailAddressNo"].Visible = false;
+
             //this safeguards us incase somebody clicks the "view email" button before selecting a row
-            Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
+            Int32 SelectedIndex = 0;
+            //this puts the emailno and emailaddressno ready for the parameters to frmViewEmail
+            EmailNo = (Int32)dataGridViewInbox["EmailNo", SelectedIndex].Value;
             EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
 
         }
@@ -69,6 +74,7 @@ namespace BackEnd
         {
             Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
             EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
+            EmailNo = (Int32)dataGridViewInbox["EmailNo", SelectedIndex].Value;
         }
     }
 }

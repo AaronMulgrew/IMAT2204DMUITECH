@@ -39,11 +39,17 @@ namespace BackEnd
 
         //this will be the function that shows the new email and it accepts the emailno selected in 
         //the datagridview
-        public void NewEmail(int EmailAddressNo)
+        public void NewEmail(int EmailAddressNo, int EmailNo)
         {
+            string EmailSubject;
+            string EmailContent;
             //txtBxFrom.Text = Convert.ToString(EmailAddressNo);
+            clsEmail OneEmail = new clsEmail();
             clsEmailCollection AllEmails = new clsEmailCollection();
             EmailAddress = AllEmails.GetEmailAddress(EmailAddressNo);
+            AllEmails.GetOneEmail(EmailNo, out EmailSubject, out EmailContent);
+            txtBxSubject.Text = EmailSubject;
+            txtBxContent.Text = EmailContent;
             txtBxFrom.Text = EmailAddress;
         }
     }

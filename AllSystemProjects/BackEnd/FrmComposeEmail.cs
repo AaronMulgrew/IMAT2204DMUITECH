@@ -55,6 +55,13 @@ namespace BackEnd
             lblMainTitle.Text = "New Email";
         }
 
+        public void AcceptEmails(List<string>EmailAddresses)
+        {
+            //this accepts the generic list and converts it to string
+            string EmailAddressList = string.Join(",", EmailAddresses.ToArray());
+            txtBxTo.Text = EmailAddressList;
+        }
+
         private void buttonSend_Click(object sender, EventArgs e)
         {
             ///these set the bool values to false
@@ -169,7 +176,12 @@ namespace BackEnd
 
         private void btnContactList_Click(object sender, EventArgs e)
         {
-
+            //this sets up the formcontactlistclass
+            frmContactList newcontactlist = new frmContactList();
+            //shows the new contact list form
+            newcontactlist.Show();
+            //closes the current form.
+            this.Close();
         }
     }
 }
