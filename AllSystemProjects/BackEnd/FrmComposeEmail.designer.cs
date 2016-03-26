@@ -62,7 +62,7 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(86, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // lblSubject
             // 
@@ -166,7 +166,7 @@
             this.txtBxAttachmentPath.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txtBxAttachmentPath.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxAttachmentPath.Location = new System.Drawing.Point(389, 688);
-            this.txtBxAttachmentPath.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBxAttachmentPath.Margin = new System.Windows.Forms.Padding(4);
             this.txtBxAttachmentPath.Multiline = true;
             this.txtBxAttachmentPath.Name = "txtBxAttachmentPath";
             this.txtBxAttachmentPath.ReadOnly = true;
@@ -211,10 +211,12 @@
             // 
             // FrmComposeEmail
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoScroll = true;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1971, 1055);
+            this.ClientSize = new System.Drawing.Size(1474, 1129);
             this.Controls.Add(this.btnContactList);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtBxAttachmentPath);

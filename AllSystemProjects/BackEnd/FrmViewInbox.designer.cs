@@ -160,10 +160,11 @@
             // 
             // frmViewInbox
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
+            this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1971, 1055);
+            this.ClientSize = new System.Drawing.Size(1246, 654);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnArchiveEmail);
             this.Controls.Add(this.btnClose);
@@ -174,6 +175,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.Name = "frmViewInbox";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "FrmViewInbox";
             this.Load += new System.EventHandler(this.FrmViewInbox_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInbox)).EndInit();
