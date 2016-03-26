@@ -23,3 +23,8 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\MyClassLibrary\b
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\MyClassLibrary.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\obj\Debug\ClassLibrary.csprojResolveAssemblyReference.cache
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb

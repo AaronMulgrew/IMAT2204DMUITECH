@@ -46,15 +46,15 @@ namespace MyClassLibrary
 
         public string GetEmailAddress(Int32 EmailAddressNo)
         {
-             //instance of the database connection class
-             clsDataConnection DB = new clsDataConnection();
-             //this adds the parameter EmailAddressNo
-             DB.AddParameter("EmailNo", EmailAddressNo);
-             //this executes the stored procedure for the email address
-             DB.Execute("sproc_tblEmailAddress_GetEmailAddress");
-             //this retrieves one email address from the Table "tblEmailAddress", index only needs to be 0
-             string EmailAddress = DB.DataTable.Rows[0]["EmailAddress"].ToString();
-             return EmailAddress;
+            //instance of the database connection class
+            clsDataConnection DB = new clsDataConnection();
+            //this adds the parameter EmailAddressNo
+            DB.AddParameter("EmailNo", EmailAddressNo);
+            //this executes the stored procedure for the email address
+            DB.Execute("sproc_tblEmailAddress_GetEmailAddress");
+            //this retrieves one email address from the Table "tblEmailAddress", index only needs to be 0
+            string EmailAddress = DB.DataTable.Rows[0]["EmailAddress"].ToString();
+            return EmailAddress;
         }
 
         public void GetOneEmail(Int32 EmailNo, out string EmailSubject, out string EmailContent)
