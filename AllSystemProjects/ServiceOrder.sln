@@ -35,6 +35,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App_Data", "App_Data", "{800544B5-EAEC-4FC1-BF8C-9223DF8A5D26}"
 	ProjectSection(SolutionItems) = preProject
 		App_Data\MainDatabase.mdf = App_Data\MainDatabase.mdf
+		App_Data\MainDatabase_log.ldf = App_Data\MainDatabase_log.ldf
 	EndProjectSection
 EndProject
 Global

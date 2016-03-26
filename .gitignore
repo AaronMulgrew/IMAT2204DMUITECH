@@ -1,8 +1,0 @@
-﻿################################################################################
-# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
-################################################################################
-
-/AllSystemProjects/BackEnd/BackEnd.csproj.user
-/AllSystemProjects/BackEnd/bin/Debug/BackEnd.vshost.exe.manifest
-/AllSystemProjects/BackEnd/obj/Debug/TempPE/Properties.Resources.Designer.cs.dll
-/AllSystemProjects/ServiceOrderTesting/obj/Debug/ServiceOrderTesting.pdb
