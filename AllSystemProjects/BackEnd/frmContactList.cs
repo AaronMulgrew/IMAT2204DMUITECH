@@ -45,17 +45,8 @@ namespace BackEnd
 
         private void btnConfirm_Click(object sender, EventArgs e)
         {
-            //a bit of linq to convert the lstbxcontacts to a generic list
-            ///FIXTHISBITTTTTT
-            List<string> EmailAddresses = lstBxContacts.SelectedItems.OfType<string>().ToList();
-
-            //instantiation of the frmcomposemail form
-            FrmComposeEmail SendAddresses = new FrmComposeEmail();
-            SendAddresses.AcceptEmails(EmailAddresses);
-            //this shows the email compostion page
-            SendAddresses.Show();
-
-            this.Close();
+            frmViewInbox form = new frmViewInbox();
+            form.Show();
         }
 
         private void lstBxContacts_SelectedIndexChanged(object sender, EventArgs e)
