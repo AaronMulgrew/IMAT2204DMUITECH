@@ -60,6 +60,9 @@
     <SignManifests>true</SignManifests>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="AE.Net.Mail">
+      <HintPath>..\packages\AE.Net.Mail.1.7.10.0\lib\net45\AE.Net.Mail.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -186,6 +189,12 @@
     <Compile Include="frmStaff.Designer.cs">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmUpdateEmailTest.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmUpdateEmailTest.Designer.cs">
+      <DependentUpon>frmUpdateEmailTest.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmUpdateOrder.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -269,6 +278,9 @@
     <EmbeddedResource Include="frmStaff.resx">
       <DependentUpon>frmStaff.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmUpdateEmailTest.resx">
+      <DependentUpon>frmUpdateEmailTest.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmUpdateOrder.resx">
       <DependentUpon>frmUpdateOrder.cs</DependentUpon>
     </EmbeddedResource>
@@ -292,6 +304,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="BackEnd_TemporaryKey.pfx" />
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\MyClassLibrary.clsEmailCollection.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

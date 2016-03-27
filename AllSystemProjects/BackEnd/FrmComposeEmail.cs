@@ -131,27 +131,20 @@ namespace BackEnd
 
                 try
                 {
-                    MailMessage mail = new MailMessage();
-                    SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                    var message = new MailMessage("dmuitech@gmail.com", txtBxTo.Text);
+                    message.Subject = txtBxSubject.Text;
+                    message.Body = txtBxMainBody.Text;
 
-                    mail.From = new MailAddress("dmuitech@gmail.com");
-                    mail.To.Add(txtBxTo.Text);
-                    mail.Subject = txtBxSubject.Text;
-                    mail.Body = txtBxMainBody.Text;
-
-                    SmtpServer.Port = 587;
-                    SmtpServer.Credentials = new System.Net.NetworkCredential(Username, Password);
-                    SmtpServer.EnableSsl = true;
-
-                    SmtpServer.Send(mail);
-                    //show the messagebox
-                    MessageBox.Show("Email Successfully Sent!");
-                    //this closes the current form
+                    SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587);
+                    mailer.Credentials = new NetworkCredential(Username, Password);
+                    mailer.EnableSsl = true;
+                    mailer.Send(message);
                     this.Close();
+                    MessageBox.Show("Successfully Sent!");
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show(ex.ToString());
+                   MessageBox.Show(ex.ToString());
                 }
             }
 

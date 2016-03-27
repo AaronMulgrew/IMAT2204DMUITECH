@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Net.Mail;
+//this is a 3rd party library to get IMAP messages in
+using AE.Net.Mail;
 
 namespace MyClassLibrary
 {
@@ -70,6 +73,19 @@ namespace MyClassLibrary
             //FIX THISSSSSSISISISISSISSSISIISIS
             EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
         }
+
+        public Array UpdateEmails()
+        {
+            // Connect to the IMAP server. The 'true' parameter uses SSL
+            ImapClient ic = new ImapClient("imap.gmail.com", "dmuitech@gmail.com", "DeMonfortUniversity2015", AuthMethods.Login, 993, true);
+            // Select a mailbox.
+            ic.SelectMailbox("INBOX");
+            // Get 11 messages
+            // MailMessage
+            AE.Net.Mail.MailMessage[] mm = ic.GetMessages(0, 10);
+            return mm;
+        }
+
 
         public List<clsEmail> AllEmails
         {
