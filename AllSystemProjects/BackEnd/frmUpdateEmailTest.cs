@@ -8,7 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using MyClassLibrary;
-using AE.Net.Mail;
+using S22.Imap;
+using System.Net.Mail;
 
 namespace BackEnd
 {
@@ -21,16 +22,20 @@ namespace BackEnd
 
         private void frmUpdateEmailTest_Load(object sender, EventArgs e)
         {
-            // Connect to the IMAP server. The 'true' parameter uses SSL
-            ImapClient ic = new ImapClient("imap.gmail.com", "dmuitech@gmail.com", "DeMonfortUniversity2015", AuthMethods.Login, 993, true);
-            // Select a mailbox.
-            ic.SelectMailbox("INBOX");
-            // Get 11 messages
-            // MailMessage
-            AE.Net.Mail.MailMessage[] mm = ic.GetMessages(0, 2);
-            foreach (MailMessage m in mm)
             {
-                textBox1.Text = Convert.ToString(m.RawHeaders);
+                using (ImapClient client = new ImapClient("imap.gmail.com", 993, "dmuitech@gmail.com", "DeMonfortUniversity2015", AuthMethod.Auto, true))
+                {
+                    var uids = client.Search(SearchCondition.All());
+                    var messages = client.GetMessages(uids);
+
+                    foreach (var mail in messages)
+                    {
+                        var header = mail.Headers["Subject"];
+                        string body = mail.Body;
+                        textBox1.Text = (header.ToString()); 
+                        textBox1.Text = body;
+                    }
+                }
             }
         }
     }

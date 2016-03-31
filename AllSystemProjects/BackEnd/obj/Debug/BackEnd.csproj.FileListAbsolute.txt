@@ -386,3 +386,7 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\obj\Debu
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmUpdateEmailTest.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\AE.Net.Mail.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\AE.Net.Mail.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\MailKit.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\S22.Imap.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\MailKit.xml
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\S22.Imap.xml

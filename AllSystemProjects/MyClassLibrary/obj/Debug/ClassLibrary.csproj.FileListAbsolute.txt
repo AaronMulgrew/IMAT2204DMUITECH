@@ -30,3 +30,7 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\o
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\obj\Debug\MyClassLibrary.pdb
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\AE.Net.Mail.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\AE.Net.Mail.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\MailKit.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\MailKit.xml
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\S22.Imap.dll
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\MyClassLibrary\bin\Debug\S22.Imap.xml
