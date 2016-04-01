@@ -14,6 +14,9 @@ namespace BackEnd
     public partial class FrmViewEmail : Form
     {
         string EmailAddress;
+        string EmailSubject;
+        string EmailContent;
+
         public FrmViewEmail()
         {
             InitializeComponent();
@@ -33,7 +36,7 @@ namespace BackEnd
         {
             //this simply calls the replyemail function within the compose email screen
             FrmComposeEmail EmailClient = new FrmComposeEmail();
-            EmailClient.ReplyEmail(EmailAddress);
+            EmailClient.ReplyEmail(EmailAddress, EmailSubject, EmailContent);
             EmailClient.Show();
         }
 
@@ -41,8 +44,6 @@ namespace BackEnd
         //the datagridview
         public void NewEmail(int EmailAddressNo, int EmailNo)
         {
-            string EmailSubject;
-            string EmailContent;
             //txtBxFrom.Text = Convert.ToString(EmailAddressNo);
             clsEmail OneEmail = new clsEmail();
             clsEmailCollection AllEmails = new clsEmailCollection();

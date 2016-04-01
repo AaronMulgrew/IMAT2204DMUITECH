@@ -39,10 +39,18 @@ namespace BackEnd
         /// this is just some dummy data that will be replaced in the full system
         /// </summary>
 
-        public void ReplyEmail(string EmailAddress)
+        public void ReplyEmail(string EmailAddress, string EmailSubject, string EmailContent)
         {
+            //this concatenates the subject and content to the reply 
+            string EmailSubjectConcat = string.Concat("Re: ", EmailSubject);
+            //this is the line to put between the reply and email back.
+            string line = "----------------------------";
+            //this concatenates the content, adding two new lines and a line to show the reply.
+            string EmailContentConcat = string.Concat(Environment.NewLine, line, Environment.NewLine, EmailContent);
             //this loads the email address automatically from the reply email
             txtBxTo.Text = EmailAddress;
+            txtBxSubject.Text = EmailSubjectConcat;
+            txtBxMainBody.Text = EmailContentConcat;
         }
 
         private void FrmComposeEmail_Load(object sender, EventArgs e)

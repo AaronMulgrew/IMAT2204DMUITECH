@@ -71,7 +71,7 @@ namespace MyClassLibrary
             DB.Execute("sproc_tblEmail_GetEmail");
             //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
             EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
-            //FIX THISSSSSSISISISISSISSSISIISIS
+            //this retrieves the email subject.
             EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
         }
 
@@ -84,41 +84,46 @@ namespace MyClassLibrary
                 var uids = client.Search(SearchCondition.All());
                 var messages = client.GetMessages(uids);
 
-
-
                 foreach (var mail in messages)
                 {
+                    
                     //set up the data connection
                     clsDataConnection DB = new clsDataConnection();
 
-                    string from = Convert.ToString(mail.From);
-                    //this uses substrings to extract the data we need from the email
-                    string output = from.Substring(from.IndexOf("<") + 1, from.IndexOf(">") - from.IndexOf("<") - 1);
-                    DB.AddParameter("EmailAddress", output);
-                    DB.Execute("sproc_tblEmail_CheckEmailAddress");
+                    DB.AddParameter("EmailContent", mail.Body);
+                    DB.Execute("sproc_tblEmail_CheckIfExists");
+                    //Int32 Result = Convert.ToInt32(DB.DataTable.Rows[0]["EmailNo"]);
                     if (DB.DataTable.Rows.Count == 0)
                     {
-                        clsDataConnection DB3 = new clsDataConnection();
-                        DB3.AddParameter("EmailAddress", output);
-                        DB3.Execute("sproc_tblEmailAddress_InsertNewEmailAddress");
+                        clsDataConnection DB5 = new clsDataConnection();
+                        string from = Convert.ToString(mail.From);
+                        //this uses substrings to extract the data we need from the email
+                        string output = from.Substring(from.IndexOf("<") + 1, from.IndexOf(">") - from.IndexOf("<") - 1);
+                        DB5.AddParameter("EmailAddress", output);
+                        DB5.Execute("sproc_tblEmail_CheckEmailAddress");
+                        if (DB.DataTable.Rows.Count == 0)
+                        {
+                            clsDataConnection DB3 = new clsDataConnection();
+                            DB3.AddParameter("EmailAddress", output);
+                            DB3.Execute("sproc_tblEmailAddress_InsertNewEmailAddress");
+                        }
+                        clsDataConnection DB4 = new clsDataConnection();
+                        DB4.AddParameter("EmailAddress", output);
+                        DB4.Execute("sproc_tblEmail_CheckEmailAddress");
+                        EmailAddressNo = Convert.ToInt32(DB4.DataTable.Rows[0]["EmailAddressNo"]);
+
+                        //new data connection for new parameters
+                        clsDataConnection DB2 = new clsDataConnection();
+                        var header = mail.Headers["Subject"];
+                        string body = mail.Body;
+                        DB2.AddParameter("EmailSubject", header);
+
+                        DB2.AddParameter("EmailContent", body);
+
+                        DB2.AddParameter("EmailAddressNo", EmailAddressNo);
+
+                        DB2.Execute("sproc_tblEmail_InsertNewEmail");
                     }
-                    clsDataConnection DB4 = new clsDataConnection();
-                    DB4.AddParameter("EmailAddress", output);
-                    DB4.Execute("sproc_tblEmail_CheckEmailAddress");
-                    EmailAddressNo = Convert.ToInt32(DB4.DataTable.Rows[0]["EmailAddressNo"]);
-
-                    //new data connection for new parameters
-                    clsDataConnection DB2 = new clsDataConnection();
-                    var header = mail.Headers["Subject"];
-                    string body = mail.Body;
-                    DB2.AddParameter("EmailSubject", header);
-
-                    DB2.AddParameter("EmailContent", body);
-
-                    DB2.AddParameter("EmailAddressNo", EmailAddressNo);
-
-                    DB2.Execute("sproc_tblEmail_InsertNewEmail");
-
                 }
             }
         }
