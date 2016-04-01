@@ -10,6 +10,7 @@ using System.Windows.Forms;
 using MyClassLibrary;
 using S22.Imap;
 using System.Net.Mail;
+using System.Text.RegularExpressions;
 
 namespace BackEnd
 {
@@ -32,8 +33,9 @@ namespace BackEnd
                     {
                         var header = mail.Headers["Subject"];
                         string body = mail.Body;
-                        textBox1.Text = (header.ToString()); 
-                        textBox1.Text = body;
+                        string from = Convert.ToString(mail.From);
+                        string output = from.Substring(from.IndexOf("<") + 1, from.IndexOf(">") - from.IndexOf("<") - 1);
+                        textBox1.Text = output;
                     }
                 }
             }

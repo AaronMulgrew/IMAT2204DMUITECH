@@ -37,6 +37,24 @@ namespace BackEnd
         {
             //create instance of the EmailCollection
             clsEmailCollection Emails = new clsEmailCollection();
+
+            //this will add new emails from the server online
+            Emails.UpdateEmails();
+
+            LoadEmails();
+
+        }
+
+
+        private void btnDeleteEmail_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void LoadEmails()
+        {
+            //create instance of the EmailCollection
+            clsEmailCollection Emails = new clsEmailCollection();
+
             //set the data source to the list of emails in the collection class
             dataGridViewInbox.DataSource = Emails.AllEmails;
             //hide the emailTimeStamp
@@ -54,12 +72,6 @@ namespace BackEnd
             //this puts the emailno and emailaddressno ready for the parameters to frmViewEmail
             EmailNo = (Int32)dataGridViewInbox["EmailNo", SelectedIndex].Value;
             EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
-
-        }
-
-
-        private void btnDeleteEmail_Click(object sender, EventArgs e)
-        {
         }
 
         private void btnShowMoreEmails_Click(object sender, EventArgs e)

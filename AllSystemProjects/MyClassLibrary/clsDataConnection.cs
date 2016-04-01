@@ -165,6 +165,7 @@ namespace MyClassLibrary
                 //add it to the command builder
                 dataCommand.Parameters.Add(SQLParams[Counter]);
             }
+
             //create an instance of the SqlParameter class
             SqlParameter returnValue = new SqlParameter();
             //set the direction as the return value
@@ -181,6 +182,8 @@ namespace MyClassLibrary
             commandBuilder = new SqlCommandBuilder(dataChannel);
             //fill the data adapter
             dataChannel.Fill(dataTable);
+
+            dataCommand.Parameters.Clear();
             //close the connection
             connectionToDB.Close();
             //return the result of the stored procedure

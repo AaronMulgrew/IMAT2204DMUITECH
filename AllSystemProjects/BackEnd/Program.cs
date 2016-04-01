@@ -16,7 +16,7 @@ namespace BackEnd
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmUpdateEmailTest());
+            Application.Run(new FrmMainMenu());
             
         }
     }
