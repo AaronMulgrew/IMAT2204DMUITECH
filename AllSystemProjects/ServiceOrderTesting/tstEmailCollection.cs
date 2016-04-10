@@ -37,7 +37,7 @@ namespace ServiceOrderTesting
             //create instance of the class
             clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
             //count some database data
-            Int32 SomeCount = 4;
+            Int32 SomeCount = 9;
             //assign the data
             AllEmails.CountEmailAddresses = SomeCount;
             //test to see if equal
@@ -83,6 +83,15 @@ namespace ServiceOrderTesting
             Emails.AllEmailAddresses = TestList;
             //test to see that the two are the same
             Assert.AreEqual(Emails.CountEmailAddresses, TestList.Count);
+        }
+
+        [TestMethod]
+        public void CheckIfUpdatedEmails()
+        {
+            clsEmailCollection Emails = new clsEmailCollection();
+
+            Emails.UpdateEmails();
+
         }
 
         //[TestMethod]
