@@ -31,18 +31,46 @@ namespace ServiceOrderTesting
 
         }
 
+        //[TestMethod]
+        //public void CountEmailPropertyOK()
+        //{
+        //    //create instance of the class
+        //    clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
+        //    //count some database data
+        //    Int32 SomeCount = 9;
+        //    //assign the data
+        //    AllEmails.CountEmailAddresses = SomeCount;
+        //    //test to see if equal
+        //    Assert.AreEqual(AllEmails.CountEmailAddresses, SomeCount);
+        //}
+
         [TestMethod]
-        public void CountEmailPropertyOK()
+        public void ListEmailsAndCountOK()
         {
-            //create instance of the class
-            clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
-            //count some database data
-            Int32 SomeCount = 9;
-            //assign the data
-            AllEmails.CountEmailAddresses = SomeCount;
-            //test to see if equal
-            Assert.AreEqual(AllEmails.CountEmailAddresses, SomeCount);
+            //create an instance of the class we want to create
+            clsEmailCollection AllAddresses = new clsEmailCollection();
+            //create some test data to assign to the property
+            //in this case the data needs to be a list of objects
+            List<clsEmail> TestList = new List<clsEmail>();
+            //add an item to the list
+            //create the item of test data
+            clsEmail TestItem = new clsEmail();
+            //set its properties
+            TestItem.EmailAddress = "mulgrewaaron1@gmail.com";
+            TestItem.EmailAddressNo = 1;
+            TestItem.EmailSubject = "blahblah";
+            TestItem.EmailContent = "blahblahblahblah";
+            //add the item to the test list
+            TestList.Add(TestItem);
+            //assign the data to the property
+            AllAddresses.AllEmails = TestList;
+            //test to see that the two values are the same
+            Assert.AreEqual(AllAddresses.CountEmails, TestList.Count);
+
         }
+
+
+
 
         [TestMethod]
         public void AllEmailsOK()
