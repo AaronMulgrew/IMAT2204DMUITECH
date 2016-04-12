@@ -11,7 +11,7 @@ namespace ServiceOrderTesting
         [TestMethod]
         public void EmailCollectionInstanceOK()
         {
-            //create instance of the class 
+           // //create instance of the class 
             clsEmailAddressCollection AllEmails = new clsEmailAddressCollection();
             //check to see exists
             Assert.IsNotNull(AllEmails);
