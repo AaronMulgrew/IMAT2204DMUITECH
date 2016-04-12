@@ -393,21 +393,5 @@ namespace TestEmail
             Assert.AreEqual(AnEmail.EmailSubject, testData);
         }
 
-
-        [TestMethod]
-        public void EmailFindMethodOK()
-        {
-            //create an instance of the class
-            clsEmail AnEmail = new clsEmail();
-            //boolean var to store result of validation
-            Boolean Found = false;
-            //create some test data
-            Int32 EmailNo = 1;
-            //invoke find method
-            Found = AnEmail.Find(EmailNo);
-            //test to see if result is correct
-            Assert.IsTrue(Found);
-        }
-
     }
 }

@@ -114,8 +114,11 @@ namespace MyClassLibrary
 
                         //new data connection for new parameters
                         clsDataConnection DB2 = new clsDataConnection();
+
                         var header = mail.Headers["Subject"];
+
                         string body = mail.Body;
+
                         DB2.AddParameter("EmailSubject", header);
 
                         DB2.AddParameter("EmailContent", body);

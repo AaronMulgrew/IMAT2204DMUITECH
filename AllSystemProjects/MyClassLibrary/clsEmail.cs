@@ -116,11 +116,5 @@ namespace MyClassLibrary
         public DateTime EmailTimeStamp { get; set; }
 
         public string EmailSubject { get; set; }
-
-        public bool Find(int EmailNo)
-        {
-            //always return true for now
-            return true;
-        }
     }
 }

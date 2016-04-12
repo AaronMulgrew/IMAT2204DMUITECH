@@ -139,6 +139,12 @@ namespace BackEnd
 
                 try
                 {
+                    //this will select multiple email addressess based on the substring
+                    
+
+
+
+
                     var message = new MailMessage("dmuitech@gmail.com", txtBxTo.Text);
                     message.Subject = txtBxSubject.Text;
                     message.Body = txtBxMainBody.Text;
