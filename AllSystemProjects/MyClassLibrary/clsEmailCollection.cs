@@ -47,6 +47,7 @@ namespace MyClassLibrary
             }
         }
 
+
         public string GetEmailAddress(Int32 EmailAddressNo)
         {
             //instance of the database connection class
@@ -158,7 +159,6 @@ namespace MyClassLibrary
 
             }
         }
-
     }
 
 

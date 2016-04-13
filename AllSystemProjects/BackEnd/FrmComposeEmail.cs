@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Net.Mail;
 using System.Net;
+using System.Text.RegularExpressions;
 
 namespace BackEnd
 {
@@ -136,16 +137,21 @@ namespace BackEnd
 
                 string Username = "dmuitech";
                 string Password = "DeMonfortUniversity2015";
+                Array result;
+                result = Regex.Split(txtBxTo.Text, @",(?=\w+:)");
 
                 try
                 {
                     //this will select multiple email addressess based on the substring
-                    
 
 
-
-
-                    var message = new MailMessage("dmuitech@gmail.com", txtBxTo.Text);
+                    var message = new MailMessage();
+                    message.From = new MailAddress("dmuitech@gmail.com");
+                    foreach (var entry in result)
+                    {
+                        message.To.Add(Convert.ToString(entry));
+                    }
+                    //same again for more.
                     message.Subject = txtBxSubject.Text;
                     message.Body = txtBxMainBody.Text;
 
@@ -158,8 +164,11 @@ namespace BackEnd
                 }
                 catch (Exception ex)
                 {
-                   MessageBox.Show(ex.ToString());
+                    MessageBox.Show(ex.ToString());
                 }
+
+
+
             }
 
 

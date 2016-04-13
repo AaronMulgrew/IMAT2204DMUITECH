@@ -183,5 +183,11 @@ namespace BackEnd
             string EditedListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
             LstBxSavedSearch.Items.Add(EditedListBoxItem);
         }
+
+        private void btnViewArchive_Click(object sender, EventArgs e)
+        {
+            frmViewArchive newArchive = new frmViewArchive();
+            newArchive.Show();
+        }
     }
 }

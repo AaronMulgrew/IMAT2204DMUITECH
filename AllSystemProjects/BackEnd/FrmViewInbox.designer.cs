@@ -164,7 +164,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1246, 654);
+            this.ClientSize = new System.Drawing.Size(1731, 852);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnArchiveEmail);
             this.Controls.Add(this.btnClose);
