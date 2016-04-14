@@ -33,16 +33,45 @@ namespace BackEnd
             Close();
         }
 
+        private static bool CheckForInternetConnection()
+        {
+            try
+            {
+                using (var client = new System.Net.WebClient())
+                {
+                    using (var stream = client.OpenRead("http://www.google.com"))
+                    {
+                        return true;
+                    }
+                }
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         private void FrmViewInbox_Load(object sender, EventArgs e)
         {
-            //create instance of the EmailCollection
-            clsEmailCollection Emails = new clsEmailCollection();
+            //this protects us for any internet connection outages
+            bool Result = CheckForInternetConnection();
+            //this runs if the internet connection is all ok
+            if (Result == true)
+            {
+                //create instance of the EmailCollection
+                clsEmailCollection Emails = new clsEmailCollection();
 
-            //this will add new emails from the server online
-            Emails.UpdateEmails();
+                //this will add new emails from the server online
+                Emails.UpdateEmails();
 
-            LoadEmails();
-
+                LoadEmails();
+            }
+            else
+            {
+                //this runs if the internet connection is not good.
+                this.Close();
+                MessageBox.Show("You must have an active internet connection");
+            }
         }
 
 

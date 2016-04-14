@@ -146,22 +146,32 @@ namespace BackEnd
 
 
                     var message = new MailMessage();
+                    //this adds the mailaddress 'from'
                     message.From = new MailAddress("dmuitech@gmail.com");
+                    //this runs for each entry in the RegEX result
                     foreach (var entry in result)
                     {
+                        //adds each email address to the mailmessage
                         message.To.Add(Convert.ToString(entry));
                     }
-                    //same again for more.
+                    //same again for subject and body.
                     message.Subject = txtBxSubject.Text;
                     message.Body = txtBxMainBody.Text;
 
+                    //set up the smtp protocol
                     SmtpClient mailer = new SmtpClient("smtp.gmail.com", 587);
+                    //add some credentials
                     mailer.Credentials = new NetworkCredential(Username, Password);
+                    //enable ssl
                     mailer.EnableSsl = true;
+                    //send the message
                     mailer.Send(message);
+                    //close the current form
                     this.Close();
+                    //display successful message
                     MessageBox.Show("Successfully Sent!");
                 }
+                //this will catch the possible errors that may occur such as loss of internet connection!
                 catch (Exception ex)
                 {
                     MessageBox.Show(ex.ToString());
