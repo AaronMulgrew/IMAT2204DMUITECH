@@ -55,19 +55,31 @@ namespace BackEnd
 
         private void FrmViewInbox_Load(object sender, EventArgs e)
         {
+            //new form
             Form f = new Form();
+            //define the size of the form
             f.Size = new Size(400, 200);
+            //make no border style
             f.FormBorderStyle = FormBorderStyle.None;
+            //don't minimize the box
             f.MinimizeBox = false;
+            //change the background colour
             f.BackColor = System.Drawing.Color.DarkBlue;
+            //change the text in the form
             f.Text = "Just Loading";
-            f.MaximizeBox = false;
+            //don't maximise box
+            f.MaximizeBox = true;
+            //initalise the new resource manager
             ResourceManager rm = Resources.ResourceManager;
+            //add the bitmap image
             Image im = (Bitmap)rm.GetObject("Spinning_Gif");
+            //initalise the picturebox
             PictureBox pb = new PictureBox();
+            //fill the dock
             pb.Dock = DockStyle.Fill;
             pb.Image = im;
             pb.Location = new Point(5, 5);
+            //show the form and add the controls.
             f.Controls.Add(pb);
             f.Show();
             //this protects us for any internet connection outages
