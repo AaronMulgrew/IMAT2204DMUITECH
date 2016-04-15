@@ -33,6 +33,8 @@
             this.lblInbox = new System.Windows.Forms.Label();
             this.dataGridViewInbox = new System.Windows.Forms.DataGridView();
             this.btnViewEmail = new System.Windows.Forms.Button();
+            this.btnRestoreEmail = new System.Windows.Forms.Button();
+            this.lblDeletion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInbox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -59,6 +61,7 @@
             this.btnClose.TabIndex = 11;
             this.btnClose.Text = "Close";
             this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // lblInbox
             // 
@@ -84,6 +87,7 @@
             this.dataGridViewInbox.Name = "dataGridViewInbox";
             this.dataGridViewInbox.Size = new System.Drawing.Size(1595, 381);
             this.dataGridViewInbox.TabIndex = 7;
+            this.dataGridViewInbox.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewInbox_CellClick);
             // 
             // btnViewEmail
             // 
@@ -97,6 +101,33 @@
             this.btnViewEmail.TabIndex = 10;
             this.btnViewEmail.Text = "View Email";
             this.btnViewEmail.UseVisualStyleBackColor = false;
+            this.btnViewEmail.Click += new System.EventHandler(this.btnViewEmail_Click);
+            // 
+            // btnRestoreEmail
+            // 
+            this.btnRestoreEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
+            this.btnRestoreEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnRestoreEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnRestoreEmail.Location = new System.Drawing.Point(811, 498);
+            this.btnRestoreEmail.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnRestoreEmail.Name = "btnRestoreEmail";
+            this.btnRestoreEmail.Size = new System.Drawing.Size(400, 125);
+            this.btnRestoreEmail.TabIndex = 14;
+            this.btnRestoreEmail.Text = "Restore Email";
+            this.btnRestoreEmail.UseVisualStyleBackColor = false;
+            this.btnRestoreEmail.Click += new System.EventHandler(this.btnRestoreEmail_Click);
+            // 
+            // lblDeletion
+            // 
+            this.lblDeletion.AutoSize = true;
+            this.lblDeletion.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDeletion.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.lblDeletion.Location = new System.Drawing.Point(23, 696);
+            this.lblDeletion.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
+            this.lblDeletion.Name = "lblDeletion";
+            this.lblDeletion.Size = new System.Drawing.Size(933, 55);
+            this.lblDeletion.TabIndex = 15;
+            this.lblDeletion.Text = "You cannot delete emails from the archive.";
             // 
             // frmViewArchive
             // 
@@ -104,6 +135,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(76)))), ((int)(((byte)(122)))));
             this.ClientSize = new System.Drawing.Size(1713, 829);
+            this.Controls.Add(this.lblDeletion);
+            this.Controls.Add(this.btnRestoreEmail);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnViewEmail);
@@ -125,5 +158,7 @@
         private System.Windows.Forms.Label lblInbox;
         private System.Windows.Forms.DataGridView dataGridViewInbox;
         private System.Windows.Forms.Button btnViewEmail;
+        private System.Windows.Forms.Button btnRestoreEmail;
+        private System.Windows.Forms.Label lblDeletion;
     }
 }

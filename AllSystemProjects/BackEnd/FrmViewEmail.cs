@@ -48,10 +48,24 @@ namespace BackEnd
             clsEmail OneEmail = new clsEmail();
             clsEmailCollection AllEmails = new clsEmailCollection();
             EmailAddress = AllEmails.GetEmailAddress(EmailAddressNo);
-            AllEmails.GetOneEmail(EmailNo, out EmailSubject, out EmailContent);
+            bool IsArchive = false;
+            AllEmails.GetOneEmail(EmailNo, IsArchive, out EmailSubject, out EmailContent);
             txtBxSubject.Text = EmailSubject;
             txtBxContent.Text = EmailContent;
             txtBxFrom.Text = EmailAddress;
         }
+
+        public void ViewArchiveEmail(int EmailAddressNo, int ArchiveNo)
+        {
+            clsEmail OneEmail = new clsEmail();
+            clsEmailCollection AllEmails = new clsEmailCollection();
+            EmailAddress = AllEmails.GetEmailAddress(EmailAddressNo);
+            bool IsArchive = true;
+            AllEmails.GetOneEmail(ArchiveNo, IsArchive, out EmailSubject, out EmailContent);
+            txtBxSubject.Text = EmailSubject;
+            txtBxContent.Text = EmailContent;
+            txtBxFrom.Text = EmailAddress;
+        }
+
     }
 }

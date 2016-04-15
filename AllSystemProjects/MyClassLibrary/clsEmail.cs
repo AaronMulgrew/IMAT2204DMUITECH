@@ -116,5 +116,7 @@ namespace MyClassLibrary
         public DateTime EmailTimeStamp { get; set; }
 
         public string EmailSubject { get; set; }
+
+        public string ArchiveNo { get; set; }
     }
 }

@@ -321,6 +321,7 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="BackEnd_TemporaryKey.pfx" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\MyClassLibrary.clsEmailCollection.datasource" />
     <None Include="Properties\Settings.settings">
@@ -337,12 +338,14 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\JustLoading.gif" />
     <Content Include="Resources\logo.png" />
     <Content Include="Resources\logosmaller.png" />
     <Content Include="Resources\small logo%28world%29.png" />
     <Content Include="Resources\Spinning-Gif.gif" />
     <Content Include="Resources\Spinning-Gif1.gif" />
     <Content Include="Resources\spinninggif.gif" />
+    <None Include="Resources\spinninggif.gif.gif" />
     <Content Include="Resources\spinninggif2.gif" />
     <Content Include="Resources\Untitled-1.png" />
   </ItemGroup>

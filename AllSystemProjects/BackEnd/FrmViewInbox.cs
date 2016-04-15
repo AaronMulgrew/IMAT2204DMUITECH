@@ -1,10 +1,12 @@
-﻿using MyClassLibrary;
+﻿using BackEnd.Properties;
+using MyClassLibrary;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Resources;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -53,6 +55,21 @@ namespace BackEnd
 
         private void FrmViewInbox_Load(object sender, EventArgs e)
         {
+            Form f = new Form();
+            f.Size = new Size(400, 200);
+            f.FormBorderStyle = FormBorderStyle.None;
+            f.MinimizeBox = false;
+            f.BackColor = System.Drawing.Color.DarkBlue;
+            f.Text = "Just Loading";
+            f.MaximizeBox = false;
+            ResourceManager rm = Resources.ResourceManager;
+            Image im = (Bitmap)rm.GetObject("Spinning_Gif");
+            PictureBox pb = new PictureBox();
+            pb.Dock = DockStyle.Fill;
+            pb.Image = im;
+            pb.Location = new Point(5, 5);
+            f.Controls.Add(pb);
+            f.Show();
             //this protects us for any internet connection outages
             bool Result = CheckForInternetConnection();
             //this runs if the internet connection is all ok
@@ -65,12 +82,14 @@ namespace BackEnd
                 Emails.UpdateEmails();
 
                 LoadEmails();
+                f.Close();
             }
             else
             {
+                LoadEmails();
                 //this runs if the internet connection is not good.
-                this.Close();
-                MessageBox.Show("You must have an active internet connection");
+                MessageBox.Show("You must have an active internet connection to retrieve latest emails.");
+                f.Close();
             }
         }
 
@@ -92,7 +111,8 @@ namespace BackEnd
             dataGridViewInbox.Columns["EmailContent"].Visible = false;
             //hide the emailNo
             dataGridViewInbox.Columns["EmailNo"].Visible = false;
-
+            //hide the archive no
+            dataGridViewInbox.Columns["ArchiveNo"].Visible = false;
             //hide the emailAddressNo
             dataGridViewInbox.Columns["EmailAddressNo"].Visible = false;
 
@@ -116,6 +136,22 @@ namespace BackEnd
             Int32 SelectedIndex = dataGridViewInbox.CurrentCell.RowIndex;
             EmailAddressNo = (Int32)dataGridViewInbox["EmailAddressNo", SelectedIndex].Value;
             EmailNo = (Int32)dataGridViewInbox["EmailNo", SelectedIndex].Value;
+        }
+
+        private void btnArchiveEmail_Click(object sender, EventArgs e)
+        {
+            //try
+            //{
+                clsDataConnection Connection = new clsDataConnection();
+                Connection.AddParameter("EmailNo", EmailNo);
+                Connection.Execute("sproc_tblEmailAndArchive_PutEmailInArchive");
+                MessageBox.Show("Successful transfer!");
+            //}
+            //catch
+            //{
+            //    MessageBox.Show("Sorry there was an error, please try again.");
+            //}
+
         }
     }
 }

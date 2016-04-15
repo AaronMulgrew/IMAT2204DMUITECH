@@ -62,18 +62,34 @@ namespace MyClassLibrary
             return EmailAddress;
         }
 
-        public void GetOneEmail(Int32 EmailNo, out string EmailSubject, out string EmailContent)
+        public void GetOneEmail(Int32 EmailNo, bool IsArchive, out string EmailSubject, out string EmailContent)
         {
-            //instance of the database connection class
-            clsDataConnection DB = new clsDataConnection();
-            //this adds the parameter EmailNo
-            DB.AddParameter("EmailNo", EmailNo);
-            //this executes the stored procedure for the email address
-            DB.Execute("sproc_tblEmail_GetEmail");
-            //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
-            EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
-            //this retrieves the email subject.
-            EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
+            if (IsArchive == true)
+            {
+                //instance of the database connection class
+                clsDataConnection DB = new clsDataConnection();
+                //this adds the parameter ArchiveNo (masked as EmailNo for purposes of the retrieval
+                DB.AddParameter("ArchiveNo", EmailNo);
+                //this executes the stored procedure for the email address
+                DB.Execute("sproc_tblArchive_GetEmail");
+                //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
+                EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
+                //this retrieves the email subject.
+                EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
+            }
+            else
+            {
+                //instance of the database connection class
+                clsDataConnection DB = new clsDataConnection();
+                //this adds the parameter EmailNo
+                DB.AddParameter("EmailNo", EmailNo);
+                //this executes the stored procedure for the email address
+                DB.Execute("sproc_tblEmail_GetEmail");
+                //this retrieves one email content and subject from the Table "tblEmailAddress", index only needs to be 0
+                EmailContent = DB.DataTable.Rows[0]["EmailContent"].ToString();
+                //this retrieves the email subject.
+                EmailSubject = DB.DataTable.Rows[0]["EmailSubject"].ToString();
+            }
         }
 
         public void UpdateEmails()
@@ -93,6 +109,8 @@ namespace MyClassLibrary
 
                     DB.AddParameter("EmailContent", mail.Body);
                     DB.Execute("sproc_tblEmail_CheckIfExists");
+                    DB.Execute("sproc_tblArchive_CheckIfExists");
+
                     //Int32 Result = Convert.ToInt32(DB.DataTable.Rows[0]["EmailNo"]);
                     if (DB.DataTable.Rows.Count == 0)
                     {

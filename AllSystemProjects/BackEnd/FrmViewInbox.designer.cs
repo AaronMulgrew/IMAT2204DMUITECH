@@ -35,12 +35,12 @@
             this.btnShowMoreEmails = new System.Windows.Forms.Button();
             this.btnViewEmail = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
-            this.btnArchiveEmail = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
             this.timerLoading = new System.Windows.Forms.Timer(this.components);
             this.clsEmailCollectionBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.allEmailsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.allEmailsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.btnArchiveEmail = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewInbox)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.clsEmailCollectionBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.allEmailsBindingSource)).BeginInit();
@@ -115,20 +115,6 @@
             this.btnClose.UseVisualStyleBackColor = false;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
-            // btnArchiveEmail
-            // 
-            this.btnArchiveEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnArchiveEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
-            this.btnArchiveEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnArchiveEmail.Location = new System.Drawing.Point(1323, 512);
-            this.btnArchiveEmail.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
-            this.btnArchiveEmail.Name = "btnArchiveEmail";
-            this.btnArchiveEmail.Size = new System.Drawing.Size(400, 125);
-            this.btnArchiveEmail.TabIndex = 5;
-            this.btnArchiveEmail.Text = "Archive Email";
-            this.btnArchiveEmail.UseVisualStyleBackColor = false;
-            this.btnArchiveEmail.Click += new System.EventHandler(this.btnDeleteEmail_Click);
-            // 
             // lblError
             // 
             this.lblError.AutoSize = true;
@@ -158,6 +144,20 @@
             this.allEmailsBindingSource1.DataMember = "AllEmails";
             this.allEmailsBindingSource1.DataSource = this.clsEmailCollectionBindingSource;
             // 
+            // btnArchiveEmail
+            // 
+            this.btnArchiveEmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
+            this.btnArchiveEmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F);
+            this.btnArchiveEmail.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnArchiveEmail.Location = new System.Drawing.Point(1323, 512);
+            this.btnArchiveEmail.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnArchiveEmail.Name = "btnArchiveEmail";
+            this.btnArchiveEmail.Size = new System.Drawing.Size(400, 125);
+            this.btnArchiveEmail.TabIndex = 7;
+            this.btnArchiveEmail.Text = "Archive Email";
+            this.btnArchiveEmail.UseVisualStyleBackColor = false;
+            this.btnArchiveEmail.Click += new System.EventHandler(this.btnArchiveEmail_Click);
+            // 
             // frmViewInbox
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(192F, 192F);
@@ -165,8 +165,8 @@
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
             this.ClientSize = new System.Drawing.Size(1731, 852);
-            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnArchiveEmail);
+            this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnViewEmail);
             this.Controls.Add(this.btnShowMoreEmails);
@@ -194,11 +194,11 @@
         private System.Windows.Forms.Button btnShowMoreEmails;
         private System.Windows.Forms.Button btnViewEmail;
         private System.Windows.Forms.Button btnClose;
-        private System.Windows.Forms.Button btnArchiveEmail;
         private System.Windows.Forms.Label lblError;
         private System.Windows.Forms.Timer timerLoading;
         private System.Windows.Forms.BindingSource allEmailsBindingSource;
         private System.Windows.Forms.BindingSource clsEmailCollectionBindingSource;
         private System.Windows.Forms.BindingSource allEmailsBindingSource1;
+        private System.Windows.Forms.Button btnArchiveEmail;
     }
 }
