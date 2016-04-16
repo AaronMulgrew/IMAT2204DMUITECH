@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MyClassLibrary;
 
 namespace BackEnd
 {
@@ -25,12 +26,28 @@ namespace BackEnd
             //this checks to see if the user has selected an item from the listbox, as the default value is -1
             if (LstBxSavedSearch.SelectedIndex > -1)
             {
+                string ListResult = LstBxSavedSearch.SelectedItem.ToString();
+
+                string AgeFrom = ListResult.Substring(7, 2);
+
+                string AgeTo = ListResult.Substring(10, 2);
+
+                string Location = ListResult.Substring(21);
+
+                clsCustomerSavedSearch NewSearch = new clsCustomerSavedSearch();
+                string EmailAddress = NewSearch.SavedSearch(AgeFrom, AgeTo, Location);
+
+                MessageBox.Show(EmailAddress);
+
                 //this sends us to the showemail function with the IsGroup Bool value being set to true
                 IsGroup = true;
                 showEmail();
 
                 //this closes the current form
                 this.Close();
+
+
+
             }
             else
             {
