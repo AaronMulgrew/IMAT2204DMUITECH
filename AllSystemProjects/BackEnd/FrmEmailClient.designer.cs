@@ -52,8 +52,8 @@
             this.LstBxSavedSearch.FormattingEnabled = true;
             this.LstBxSavedSearch.ItemHeight = 46;
             this.LstBxSavedSearch.Items.AddRange(new object[] {
-            "Age(s) 20-20 Location Leicester",
-            "Age(s) 45-50 Location Loughborough"});
+            "Age(s) 20-40 Location Leicester",
+            "Age(s) 45-60 Location Loughborough"});
             this.LstBxSavedSearch.Location = new System.Drawing.Point(989, 154);
             this.LstBxSavedSearch.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.LstBxSavedSearch.Name = "LstBxSavedSearch";
@@ -233,7 +233,7 @@
             this.Controls.Add(this.btnProceed);
             this.Controls.Add(this.LstBxSavedSearch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FrmEmailClient";
             this.Text = "Email Client";
             this.ResumeLayout(false);

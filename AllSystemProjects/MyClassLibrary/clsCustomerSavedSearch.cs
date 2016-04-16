@@ -18,16 +18,13 @@ namespace MyClassLibrary
 
             string EmailAddress = "";
 
-            //get the count
+            ////get the count
             Int32 RecordCount = DataConnection.Count;
-            //set up index for the loop
             Int32 Index = 0;
-            //while there are records to process
             while (Index < RecordCount)
             {
-                EmailAddress = DataConnection.DataTable.Rows[Index]["EmailAddress"].ToString();
+                EmailAddress += DataConnection.DataTable.Rows[0]["EmailAddress"].ToString();
             }
-
             return EmailAddress;
         }
     }
