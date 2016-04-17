@@ -50,6 +50,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="clsCustomer.cs" />
+    <Compile Include="clsCustomerCollection.cs" />
     <Compile Include="clsCustomerSavedSearch.cs" />
     <Compile Include="clsDataConnection.cs" />
     <Compile Include="clsEmail.cs" />

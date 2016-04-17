@@ -37,6 +37,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App_Data", "App_Data", "{80
 		App_Data\MainDatabase.mdf = App_Data\MainDatabase.mdf
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FrontEndMariam", "FrontEndMariam\FrontEndMariam.csproj", "{971FEEAB-3921-4793-8A05-23DC706C8EB8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -59,6 +61,10 @@ Global
 		{848EED38-2665-4447-ADF5-F6E9467679F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{848EED38-2665-4447-ADF5-F6E9467679F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{848EED38-2665-4447-ADF5-F6E9467679F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{971FEEAB-3921-4793-8A05-23DC706C8EB8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{971FEEAB-3921-4793-8A05-23DC706C8EB8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{971FEEAB-3921-4793-8A05-23DC706C8EB8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{971FEEAB-3921-4793-8A05-23DC706C8EB8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

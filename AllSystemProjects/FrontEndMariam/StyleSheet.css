@@ -1,0 +1,106 @@
+﻿
+body
+{
+    background-color: #2a3865;
+    text-align:center;
+    color: white;
+    font-family:'Microsoft Sans Serif';
+}
+
+header
+{
+    background-color: #657198;
+    height: 5%;
+    position: fixed;
+    width: 100%;
+    top: 0%;
+    left: 0%;
+    border-width: 2px 1px;
+    border-style: solid;
+    border-color:#ffffff;
+    font-family:'Microsoft Sans Serif';
+    
+}
+
+nav
+{
+    background-color: #657198;
+    margin-top:0.4%;
+    width: 100%;
+    height:5%;
+    top: 40%;
+    left: 0%;
+    text-align:center;
+    border-color:white;
+    border-width: 2px 1px;
+    border-style: solid;
+    border-color:#ffffff;
+    font-family:'Microsoft Sans Serif';
+}
+
+article
+{
+    background-color: #2a3865;
+    width: 100%;
+    height: 50%;
+    top:45px;
+    font-family:'Microsoft Sans Serif';
+}
+
+footer
+{
+    background-color: #657198;
+    height: 5%;
+    position: fixed;
+    width: 100%;
+    top: 95%;
+  
+    border-color:white;
+    border-width: 2px 1px;
+    border-style: solid;
+    border-color:#ffffff;
+    font-family:'Microsoft Sans Serif';
+}
+
+
+#TopMenu
+{
+    float:right;
+    margin-top:0.4%;
+    height: 37px;
+}
+
+#logo
+{
+    margin-top:2.5%;
+}
+
+a
+{
+    color:white;
+}
+
+a.link
+{
+    color:white;
+}
+a.visited
+{
+    color:white;
+}
+
+a.hover
+{
+    color:white;
+}
+
+#Text
+{
+    font-size:x-large;
+    text-align:center;
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+}
+ 
+
