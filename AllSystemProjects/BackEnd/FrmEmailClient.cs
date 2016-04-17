@@ -28,23 +28,32 @@ namespace BackEnd
             {
                 string ListResult = LstBxSavedSearch.SelectedItem.ToString();
 
-                string AgeFrom = ListResult.Substring(7, 2);
+                Int32 AgeFrom = Convert.ToInt32(ListResult.Substring(7, 2));
 
-                string AgeTo = ListResult.Substring(10, 2);
+                Int32 AgeTo = Convert.ToInt32(ListResult.Substring(10, 2));
 
-                string Location = ListResult.Substring(21);
+                string Location = ListResult.Substring(22);
 
                 clsCustomerSavedSearch NewSearch = new clsCustomerSavedSearch();
                 string EmailAddress = NewSearch.SavedSearch(AgeFrom, AgeTo, Location);
 
-                MessageBox.Show(EmailAddress);
+                //this runs if the email address is initalised but never appended.
+                if (EmailAddress == "")
+                {
+                    MessageBox.Show("No results found!");
+                }
+                else
+                {
+                    //this sends us to the showemail function with the IsGroup Bool value being set to true
+                    IsGroup = true;
+                    FrmComposeEmail newEmail = new FrmComposeEmail();
+                    newEmail.GroupEmail(EmailAddress);
 
-                //this sends us to the showemail function with the IsGroup Bool value being set to true
-                IsGroup = true;
-                showEmail();
+                    newEmail.Show();
 
-                //this closes the current form
-                this.Close();
+                    //this closes the current form
+                    this.Close();
+                }
 
 
 
@@ -78,14 +87,6 @@ namespace BackEnd
             //this runs of the user has selected group email
             if (IsGroup == true)
             {
-                //create a new instance of the frmComposeEmail form
-                FrmComposeEmail NewGroupEmail = new FrmComposeEmail();
-                
-                //new GroupEmail function in frmComposeEmail
-                NewGroupEmail.GroupEmail();
-                
-                //shows the new form
-                NewGroupEmail.Show();
             }
             else
             {

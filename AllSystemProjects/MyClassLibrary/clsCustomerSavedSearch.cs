@@ -8,7 +8,7 @@ namespace MyClassLibrary
 {
     public class clsCustomerSavedSearch
     {
-        public string SavedSearch (string AgeFrom, string AgeTo, string Location)
+        public string SavedSearch (Int32 AgeFrom, Int32 AgeTo, string Location)
         {
             clsDataConnection DataConnection = new clsDataConnection();
             DataConnection.AddParameter("AgeFrom", AgeFrom);
@@ -23,7 +23,16 @@ namespace MyClassLibrary
             Int32 Index = 0;
             while (Index < RecordCount)
             {
-                EmailAddress += DataConnection.DataTable.Rows[0]["EmailAddress"].ToString();
+                EmailAddress += DataConnection.DataTable.Rows[Index]["EmailAddress"].ToString();
+                if (Index == RecordCount - 1)
+                {
+                    EmailAddress += "";
+                }
+                else
+                {
+                    EmailAddress += ", ";
+                }
+                Index++;
             }
             return EmailAddress;
         }

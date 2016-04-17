@@ -62,7 +62,7 @@
             // 
             this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(86, 4);
             // 
             // lblSubject
             // 
@@ -82,7 +82,7 @@
             this.txtBxSubject.Location = new System.Drawing.Point(389, 365);
             this.txtBxSubject.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBxSubject.Name = "txtBxSubject";
-            this.txtBxSubject.Size = new System.Drawing.Size(1380, 56);
+            this.txtBxSubject.Size = new System.Drawing.Size(1556, 56);
             this.txtBxSubject.TabIndex = 5;
             // 
             // lblMainBody
@@ -104,7 +104,7 @@
             this.txtBxMainBody.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBxMainBody.Multiline = true;
             this.txtBxMainBody.Name = "txtBxMainBody";
-            this.txtBxMainBody.Size = new System.Drawing.Size(1380, 206);
+            this.txtBxMainBody.Size = new System.Drawing.Size(1556, 206);
             this.txtBxMainBody.TabIndex = 7;
             // 
             // buttonAttachments
@@ -140,7 +140,7 @@
             this.buttonClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
             this.buttonClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.buttonClose.Location = new System.Drawing.Point(1392, 945);
+            this.buttonClose.Location = new System.Drawing.Point(1566, 945);
             this.buttonClose.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.buttonClose.Name = "buttonClose";
             this.buttonClose.Size = new System.Drawing.Size(379, 80);
@@ -170,7 +170,7 @@
             this.txtBxAttachmentPath.Multiline = true;
             this.txtBxAttachmentPath.Name = "txtBxAttachmentPath";
             this.txtBxAttachmentPath.ReadOnly = true;
-            this.txtBxAttachmentPath.Size = new System.Drawing.Size(1380, 130);
+            this.txtBxAttachmentPath.Size = new System.Drawing.Size(1556, 130);
             this.txtBxAttachmentPath.TabIndex = 13;
             this.txtBxAttachmentPath.TabStop = false;
             // 
@@ -192,7 +192,7 @@
             this.txtBxTo.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.txtBxTo.Multiline = true;
             this.txtBxTo.Name = "txtBxTo";
-            this.txtBxTo.Size = new System.Drawing.Size(1380, 106);
+            this.txtBxTo.Size = new System.Drawing.Size(1556, 106);
             this.txtBxTo.TabIndex = 3;
             // 
             // btnContactList
@@ -216,7 +216,7 @@
             this.AutoScroll = true;
             this.AutoSize = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1474, 1129);
+            this.ClientSize = new System.Drawing.Size(2013, 1129);
             this.Controls.Add(this.btnContactList);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.txtBxAttachmentPath);

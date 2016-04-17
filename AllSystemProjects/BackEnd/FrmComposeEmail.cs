@@ -29,10 +29,9 @@ namespace BackEnd
         /// this is if the user has navigated ot this page via the saved search page
         /// </summary>
 
-        public void GroupEmail()
+        public void GroupEmail(string EmailAddress)
         {
-            txtBxTo.Text = "SJAS@hotmail.com, lara11@hotmail.com, locals@hotmail.co.uk";
-            lblMainTitle.Text = "New Group Email";
+            txtBxTo.Text = EmailAddress;
         }
 
         /// <summary>
