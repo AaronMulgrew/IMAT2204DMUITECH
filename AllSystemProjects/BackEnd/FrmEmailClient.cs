@@ -207,5 +207,28 @@ namespace BackEnd
             frmViewArchive newArchive = new frmViewArchive();
             newArchive.Show();
         }
+
+        private void FrmEmailClient_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                clsDataConnection NewConnection = new clsDataConnection();
+                NewConnection.Execute("sproc_tblGroupList_GetAllGroupList");
+                Int32 RecordCount = NewConnection.Count;
+                Int32 Index = 0;
+                while (Index < RecordCount)
+                {
+                    string dd = "Age(s) ";
+                    dd += NewConnection.DataTable.Rows[Index]["AgeFrom"].ToString();
+                    dd += NewConnection.DataTable.Rows[Index]["AgeTo"].ToString();
+                    dd += NewConnection.DataTable.Rows[Index]["Location"].ToString();
+                    LstBxSavedSearch.DataSource = dd;
+                }
+            }
+            catch
+            {
+                MessageBox.Show("Group List Retreival failed, please try again");
+            }
+        }
     }
 }
