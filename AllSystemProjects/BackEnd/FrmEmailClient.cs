@@ -13,6 +13,7 @@ namespace BackEnd
 {
     public partial class FrmEmailClient : Form
     {
+
         //this is a high level variable IsGroup that checks whether the user is composing a group email
         bool IsGroup;
 
@@ -167,9 +168,7 @@ namespace BackEnd
             {
                 if (MessageBox.Show("Are you sure you want to delete this saved search?", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    //this removes item at the selected index
-                    Int32 SelectedIndex = LstBxSavedSearch.SelectedIndex;
-                    LstBxSavedSearch.Items.RemoveAt(SelectedIndex);
+                    MessageBox.Show(LstBxSavedSearch.SelectedIndex.ToString());
                 }
  
             }
@@ -183,10 +182,15 @@ namespace BackEnd
 
         public void AddNewSavedSearch(Int32 AgeMin, Int32 AgeMax, string Location)
         {
+            clsDataConnection NewConnection = new clsDataConnection();
+            NewConnection.AddParameter("AgeFrom", AgeMin);
+            NewConnection.AddParameter("AgeTo", AgeMax);
+            NewConnection.AddParameter("Location", Location);
+            NewConnection.Execute("sproc_tblGroupList_AddNewGroupList");
             //this adds the new list box item from the Saved Search form
             //to the listbox
-            string NewListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
-            LstBxSavedSearch.Items.Add(NewListBoxItem);
+            //string NewListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
+            //LstBxSavedSearch.Items.Add(NewListBoxItem);
         }
 
 
@@ -212,18 +216,29 @@ namespace BackEnd
         {
             try
             {
+                //initalise the data connection
                 clsDataConnection NewConnection = new clsDataConnection();
+                //add the sproc
                 NewConnection.Execute("sproc_tblGroupList_GetAllGroupList");
+                //get the count of records
                 Int32 RecordCount = NewConnection.Count;
+                //set up the index
                 Int32 Index = 0;
+                //create a new list
+                List<string> NewList = new List<string>();
+                //this runs whilst index is lower than record count
                 while (Index < RecordCount)
                 {
                     string dd = "Age(s) ";
                     dd += NewConnection.DataTable.Rows[Index]["AgeFrom"].ToString();
+                    dd += "-";
                     dd += NewConnection.DataTable.Rows[Index]["AgeTo"].ToString();
+                    dd += " Location ";
                     dd += NewConnection.DataTable.Rows[Index]["Location"].ToString();
-                    LstBxSavedSearch.DataSource = dd;
+                    NewList.Add(dd);
+                    Index++;
                 }
+                LstBxSavedSearch.DataSource = NewList;
             }
             catch
             {
