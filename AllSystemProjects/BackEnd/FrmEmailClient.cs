@@ -14,6 +14,8 @@ namespace BackEnd
     public partial class FrmEmailClient : Form
     {
 
+        private List<Int32> GroupListNo = new List<Int32>();
+
         //this is a high level variable IsGroup that checks whether the user is composing a group email
         bool IsGroup;
 
@@ -168,7 +170,7 @@ namespace BackEnd
             {
                 if (MessageBox.Show("Are you sure you want to delete this saved search?", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    MessageBox.Show(LstBxSavedSearch.SelectedIndex.ToString());
+                    MessageBox.Show(Convert.ToString((GroupListNo)));
                 }
  
             }
@@ -187,10 +189,6 @@ namespace BackEnd
             NewConnection.AddParameter("AgeTo", AgeMax);
             NewConnection.AddParameter("Location", Location);
             NewConnection.Execute("sproc_tblGroupList_AddNewGroupList");
-            //this adds the new list box item from the Saved Search form
-            //to the listbox
-            //string NewListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
-            //LstBxSavedSearch.Items.Add(NewListBoxItem);
         }
 
 
@@ -198,9 +196,8 @@ namespace BackEnd
 
         public void FinishEdit(Int32 AgeMin, Int32 AgeMax, string Location, Int32 SelectedIndex)
         {
-            /// this Is the function for the Finish edit, it starts by removing 
-            /// the item according to the SelectedIndex parameter
-            /// then adds the edited listbox item at the bottom of the list
+            //this adds a new edit with the new parameters then deletes the old edit
+
             LstBxSavedSearch.Items.RemoveAt(SelectedIndex);
             string EditedListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
             LstBxSavedSearch.Items.Add(EditedListBoxItem);
@@ -235,6 +232,7 @@ namespace BackEnd
                     dd += NewConnection.DataTable.Rows[Index]["AgeTo"].ToString();
                     dd += " Location ";
                     dd += NewConnection.DataTable.Rows[Index]["Location"].ToString();
+                    GroupListNo.Add(Convert.ToInt32(NewConnection.DataTable.Rows[Index]["GroupListNo"]));
                     NewList.Add(dd);
                     Index++;
                 }
