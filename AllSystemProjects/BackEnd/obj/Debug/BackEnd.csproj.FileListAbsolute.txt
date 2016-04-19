@@ -399,3 +399,6 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\bin\Debu
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\bin\Debug\S22.Imap.xml
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmUpdateEmailTest.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmViewArchive.resources
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe.config
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
+C:\Users\P14165162\Source\Repos\IMAT2204DMUITECH3\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb
