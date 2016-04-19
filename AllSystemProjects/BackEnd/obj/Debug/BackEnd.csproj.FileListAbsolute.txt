@@ -198,12 +198,6 @@ C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\D
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.csproj.GenerateResource.Cache
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\p14185776\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmComposeEmail.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmEmailClient.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmSavedSearch.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewEmail.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmViewInbox.resources
-C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackOffice.FrmMainMenu.resources
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\bin\Debug\MyClassLibrary.dll
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\bin\Debug\MyClassLibrary.pdb
 C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmContactList.resources
@@ -342,3 +336,13 @@ C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH2\AllSystemProjects\BackEnd\obj\Debu
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\bin\Debug\BackEnd.exe.config
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\obj\Debug\BackEnd.exe
 C:\Users\Aaron\Desktop\Backups\AllSystemProjects\BackEnd\obj\Debug\BackEnd.pdb
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.FrmComposeEmail.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.FrmEmailClient.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.FrmMainMenu.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.FrmSavedSearch.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.FrmViewEmail.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\BackEnd.frmViewInbox.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\Invoice.frmInvoice.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\Invoice.frmInvoiceList.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\Invoice.frmInvoiceListSubmit.resources
+C:\Users\Aaron\Source\Repos\IMAT2204DMUITECH\AllSystemProjects\BackEnd\obj\Debug\Invoice.frmUpdateWindow.resources
