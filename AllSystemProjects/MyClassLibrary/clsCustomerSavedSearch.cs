@@ -36,5 +36,15 @@ namespace MyClassLibrary
             }
             return EmailAddress;
         }
+
+        public void RemoveItem(Int32 AgeFrom, Int32 AgeTo, string Location)
+        {
+
+            clsDataConnection DataConn = new clsDataConnection();
+            DataConn.AddParameter("AgeFrom", AgeFrom);
+            DataConn.AddParameter("AgeTo", AgeTo);
+            DataConn.AddParameter("Location", Location);
+            DataConn.Execute("sproc_tblGroupList_RemoveGroupList");
+        }
     }
 }

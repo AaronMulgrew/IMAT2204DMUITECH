@@ -170,7 +170,16 @@ namespace BackEnd
             {
                 if (MessageBox.Show("Are you sure you want to delete this saved search?", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
-                    MessageBox.Show(Convert.ToString((GroupListNo)));
+                    string ListResult = LstBxSavedSearch.SelectedItem.ToString();
+                    Int32 AgeFrom = Convert.ToInt32(ListResult.Substring(7, 2));
+
+                    Int32 AgeTo = Convert.ToInt32(ListResult.Substring(10, 2));
+
+                    string Location = ListResult.Substring(22);
+
+                    clsCustomerSavedSearch SavedSearch = new clsCustomerSavedSearch();
+                    SavedSearch.RemoveItem(AgeFrom, AgeTo, Location);
+
                 }
  
             }
@@ -196,6 +205,8 @@ namespace BackEnd
 
         public void FinishEdit(Int32 AgeMin, Int32 AgeMax, string Location, Int32 SelectedIndex)
         {
+
+
             //this adds a new edit with the new parameters then deletes the old edit
 
             LstBxSavedSearch.Items.RemoveAt(SelectedIndex);
@@ -213,12 +224,14 @@ namespace BackEnd
         {
             try
             {
+                //clear the listbox
+                LstBxSavedSearch.Items.Clear();
                 //initalise the data connection
-                clsDataConnection NewConnection = new clsDataConnection();
+                clsDataConnection DataConn = new clsDataConnection();
                 //add the sproc
-                NewConnection.Execute("sproc_tblGroupList_GetAllGroupList");
+                DataConn.Execute("sproc_tblGroupList_GetAllGroupList");
                 //get the count of records
-                Int32 RecordCount = NewConnection.Count;
+                Int32 RecordCount = DataConn.Count;
                 //set up the index
                 Int32 Index = 0;
                 //create a new list
@@ -226,14 +239,14 @@ namespace BackEnd
                 //this runs whilst index is lower than record count
                 while (Index < RecordCount)
                 {
-                    string dd = "Age(s) ";
-                    dd += NewConnection.DataTable.Rows[Index]["AgeFrom"].ToString();
-                    dd += "-";
-                    dd += NewConnection.DataTable.Rows[Index]["AgeTo"].ToString();
-                    dd += " Location ";
-                    dd += NewConnection.DataTable.Rows[Index]["Location"].ToString();
-                    GroupListNo.Add(Convert.ToInt32(NewConnection.DataTable.Rows[Index]["GroupListNo"]));
-                    NewList.Add(dd);
+                    string zz = "Age(s) ";
+                    zz += DataConn.DataTable.Rows[Index]["AgeFrom"].ToString();
+                    zz += "-";
+                    zz += DataConn.DataTable.Rows[Index]["AgeTo"].ToString();
+                    zz += " Location ";
+                    zz += DataConn.DataTable.Rows[Index]["Location"].ToString();
+                    GroupListNo.Add(Convert.ToInt32(DataConn.DataTable.Rows[Index]["GroupListNo"]));
+                    NewList.Add(zz);
                     Index++;
                 }
                 LstBxSavedSearch.DataSource = NewList;
