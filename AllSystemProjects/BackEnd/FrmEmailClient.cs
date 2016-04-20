@@ -143,15 +143,12 @@ namespace BackEnd
                 Int32 MaxAge = Convert.ToInt32(SavedSearchtext.Substring(10, 2));
                 string Location = SavedSearchtext.Substring(22);
 
-                //this gets the selected index number from the listbox
-                Int32 SelectedIndex = LstBxSavedSearch.SelectedIndex;
-
                 //this gets the new instance of the form Saved Search and it sends the Parameters to the Editsearch function
                 //on the saved search form, displays the saved search form
                 //then closes the current form (this is due to issues regarding showing the new listbox items on the listbox)
                 
                 FrmSavedSearch SavedSearch = new FrmSavedSearch();
-                SavedSearch.EditSearch(MinAge, MaxAge, Location, SelectedIndex);
+                SavedSearch.EditSearch(MinAge, MaxAge, Location);
                 SavedSearch.Show();
                 this.Close();
             }
@@ -170,15 +167,25 @@ namespace BackEnd
             {
                 if (MessageBox.Show("Are you sure you want to delete this saved search?", "Confirm Deletion", MessageBoxButtons.YesNo) == DialogResult.Yes)
                 {
+                    //this gets the list result from the lisbox saved search
                     string ListResult = LstBxSavedSearch.SelectedItem.ToString();
+                    //this gets the integer AgeFrom from the listresult
                     Int32 AgeFrom = Convert.ToInt32(ListResult.Substring(7, 2));
-
+                    //this gets the integer AgeTo from the ListResult
                     Int32 AgeTo = Convert.ToInt32(ListResult.Substring(10, 2));
-
+                    //this gets the location from the ListResult
                     string Location = ListResult.Substring(22);
 
+                    //new clsCustomerSavedSearch instance of the class
                     clsCustomerSavedSearch SavedSearch = new clsCustomerSavedSearch();
+                    //call the removeItem method passing parameters
                     SavedSearch.RemoveItem(AgeFrom, AgeTo, Location);
+                    //initalise the form ready for the refresh
+                    FrmEmailClient EmailClient = new FrmEmailClient();
+                    //close the current form
+                    this.Close();
+                    //call the same form again.
+                    EmailClient.Show();
 
                 }
  
@@ -189,29 +196,6 @@ namespace BackEnd
                 lblError.Text = "Please Select an item to delete from the listbox";
             }
 
-        }
-
-        public void AddNewSavedSearch(Int32 AgeMin, Int32 AgeMax, string Location)
-        {
-            clsDataConnection NewConnection = new clsDataConnection();
-            NewConnection.AddParameter("AgeFrom", AgeMin);
-            NewConnection.AddParameter("AgeTo", AgeMax);
-            NewConnection.AddParameter("Location", Location);
-            NewConnection.Execute("sproc_tblGroupList_AddNewGroupList");
-        }
-
-
-
-
-        public void FinishEdit(Int32 AgeMin, Int32 AgeMax, string Location, Int32 SelectedIndex)
-        {
-
-
-            //this adds a new edit with the new parameters then deletes the old edit
-
-            LstBxSavedSearch.Items.RemoveAt(SelectedIndex);
-            string EditedListBoxItem = "Age(s) " + AgeMin + "-" + AgeMax + " Location " + Location;
-            LstBxSavedSearch.Items.Add(EditedListBoxItem);
         }
 
         private void btnViewArchive_Click(object sender, EventArgs e)

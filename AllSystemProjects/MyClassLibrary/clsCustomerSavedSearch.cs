@@ -46,5 +46,14 @@ namespace MyClassLibrary
             DataConn.AddParameter("Location", Location);
             DataConn.Execute("sproc_tblGroupList_RemoveGroupList");
         }
+
+        public void AddNewSavedSearch(Int32 AgeMin, Int32 AgeMax, string Location)
+        {
+            clsDataConnection NewConn = new clsDataConnection();
+            NewConn.AddParameter("AgeFrom", AgeMin);
+            NewConn.AddParameter("AgeTo", AgeMax);
+            NewConn.AddParameter("Location", Location);
+            NewConn.Execute("sproc_tblGroupList_AddNewGroupList");
+        }
     }
 }

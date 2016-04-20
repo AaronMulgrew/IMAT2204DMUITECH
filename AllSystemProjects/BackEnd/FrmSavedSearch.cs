@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyClassLibrary;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,6 +18,10 @@ namespace BackEnd
 
         //this checks if the user has a selected index
         public Int32 selectedIndex = 0;
+
+        public Int32 OldMinAge;
+        public Int32 OldMaxAge;
+        public string OldLocation;
 
         public FrmSavedSearch()
         {
@@ -40,8 +45,12 @@ namespace BackEnd
         /// <param name="Location"></param>
         /// <param name="SelectedIndex"></param>
 
-        public void EditSearch(Int32 MinAge, Int32 MaxAge, string Location, Int32 SelectedIndex)
+        public void EditSearch(Int32 MinAge, Int32 MaxAge, string Location)
         {
+            OldMinAge = MinAge;
+            OldMaxAge = MaxAge;
+            OldLocation = Location;
+
             //this sets the editCounter to 1 as the user is editing the item
             EditCounter = 1;
 
@@ -51,14 +60,11 @@ namespace BackEnd
             NumUpDownAgeMax.Value = MaxAge;
             //this gets the location
             txtBxLocation.Text = Location;
-            //this gets the selectedIndex of the item selected
-            selectedIndex = SelectedIndex;
         }
 
         private void btnClose_Click(object sender, EventArgs e)
         {
-            //this closes the current form
-            Close();
+            this.Close();
         }
 
         private void btnConfirm_Click(object sender, EventArgs e)
@@ -73,6 +79,8 @@ namespace BackEnd
             AgeMax = Convert.ToInt32(NumUpDownAgeMax.Value);
             Location = txtBxLocation.Text;
 
+
+
             //these are some simple validation techniques, before the full ones are implemented in the main model
             if (Location == "")
             {
@@ -85,25 +93,20 @@ namespace BackEnd
             }
 
             //this runs if all the validation runs ok
-            //this is also runs if the user is editing a current saved search
+            //this also runs if the user is editing a current saved search
             else
             {
-                //this loads the saved search within the EmailClient page
-                if (EditCounter == 1)
-                {
                     FrmEmailClient EmailClient = new FrmEmailClient();
-                    EmailClient.FinishEdit(AgeMin, AgeMax, Location, selectedIndex);
+                    clsCustomerSavedSearch SavedSearch = new clsCustomerSavedSearch();
+                    SavedSearch.AddNewSavedSearch(AgeMin, AgeMax, Location);
+                    //this runs if it's an edit rather than a new email
+                    if (OldMinAge != 0)
+                    {
+                        clsCustomerSavedSearch SavedSearch2 = new clsCustomerSavedSearch();
+                        SavedSearch2.RemoveItem(OldMinAge, OldMaxAge, OldLocation);
+                    }
                     EmailClient.Show();
                     this.Close();
-                }
-                //this loads the saved search if it is a new addition
-                else
-                {
-                    FrmEmailClient EmailClient = new FrmEmailClient();
-                    EmailClient.AddNewSavedSearch(AgeMin, AgeMax, Location);
-                    EmailClient.Show();
-                    this.Close();
-                }
             }
         }
     }

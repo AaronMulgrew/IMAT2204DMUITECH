@@ -38,9 +38,9 @@
             this.lblLocation = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.txtBxLocation = new System.Windows.Forms.TextBox();
-            this.btnClose = new System.Windows.Forms.Button();
             this.btnConfirm = new System.Windows.Forms.Button();
             this.lblError = new System.Windows.Forms.Label();
+            this.btnClose = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDwnAgeMin)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NumUpDownAgeMax)).BeginInit();
             this.SuspendLayout();
@@ -50,10 +50,10 @@
             this.lblSavedSearch.AutoSize = true;
             this.lblSavedSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.lblSavedSearch.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblSavedSearch.Location = new System.Drawing.Point(91, 80);
-            this.lblSavedSearch.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblSavedSearch.Location = new System.Drawing.Point(121, 100);
+            this.lblSavedSearch.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblSavedSearch.Name = "lblSavedSearch";
-            this.lblSavedSearch.Size = new System.Drawing.Size(270, 46);
+            this.lblSavedSearch.Size = new System.Drawing.Size(365, 63);
             this.lblSavedSearch.TabIndex = 2;
             this.lblSavedSearch.Text = "Saved Search";
             // 
@@ -62,9 +62,10 @@
             this.lblAge.AutoSize = true;
             this.lblAge.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAge.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAge.Location = new System.Drawing.Point(109, 241);
+            this.lblAge.Location = new System.Drawing.Point(145, 301);
+            this.lblAge.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAge.Name = "lblAge";
-            this.lblAge.Size = new System.Drawing.Size(122, 46);
+            this.lblAge.Size = new System.Drawing.Size(165, 63);
             this.lblAge.TabIndex = 3;
             this.lblAge.Text = "Ages:";
             // 
@@ -73,7 +74,8 @@
             this.NumUpDwnAgeMin.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.NumUpDwnAgeMin.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.NumUpDwnAgeMin.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.NumUpDwnAgeMin.Location = new System.Drawing.Point(270, 243);
+            this.NumUpDwnAgeMin.Location = new System.Drawing.Point(360, 304);
+            this.NumUpDwnAgeMin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumUpDwnAgeMin.Maximum = new decimal(new int[] {
             120,
             0,
@@ -85,7 +87,7 @@
             0,
             0});
             this.NumUpDwnAgeMin.Name = "NumUpDwnAgeMin";
-            this.NumUpDwnAgeMin.Size = new System.Drawing.Size(120, 53);
+            this.NumUpDwnAgeMin.Size = new System.Drawing.Size(160, 68);
             this.NumUpDwnAgeMin.TabIndex = 4;
             this.NumUpDwnAgeMin.Value = new decimal(new int[] {
             18,
@@ -98,7 +100,8 @@
             this.NumUpDownAgeMax.BackColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.NumUpDownAgeMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F);
             this.NumUpDownAgeMax.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.NumUpDownAgeMax.Location = new System.Drawing.Point(604, 243);
+            this.NumUpDownAgeMax.Location = new System.Drawing.Point(805, 304);
+            this.NumUpDownAgeMax.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.NumUpDownAgeMax.Maximum = new decimal(new int[] {
             120,
             0,
@@ -110,7 +113,7 @@
             0,
             0});
             this.NumUpDownAgeMax.Name = "NumUpDownAgeMax";
-            this.NumUpDownAgeMax.Size = new System.Drawing.Size(120, 53);
+            this.NumUpDownAgeMax.Size = new System.Drawing.Size(160, 68);
             this.NumUpDownAgeMax.TabIndex = 5;
             this.NumUpDownAgeMax.Value = new decimal(new int[] {
             18,
@@ -123,9 +126,10 @@
             this.lblAgeTo.AutoSize = true;
             this.lblAgeTo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblAgeTo.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblAgeTo.Location = new System.Drawing.Point(442, 243);
+            this.lblAgeTo.Location = new System.Drawing.Point(589, 304);
+            this.lblAgeTo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblAgeTo.Name = "lblAgeTo";
-            this.lblAgeTo.Size = new System.Drawing.Size(67, 46);
+            this.lblAgeTo.Size = new System.Drawing.Size(90, 63);
             this.lblAgeTo.TabIndex = 6;
             this.lblAgeTo.Text = "To";
             // 
@@ -134,42 +138,30 @@
             this.lblLocation.AutoSize = true;
             this.lblLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLocation.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblLocation.Location = new System.Drawing.Point(37, 351);
+            this.lblLocation.Location = new System.Drawing.Point(49, 439);
+            this.lblLocation.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLocation.Name = "lblLocation";
-            this.lblLocation.Size = new System.Drawing.Size(184, 46);
+            this.lblLocation.Size = new System.Drawing.Size(247, 63);
             this.lblLocation.TabIndex = 7;
             this.lblLocation.Text = "Location:";
             // 
             // contextMenuStrip1
             // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(86, 4);
             // 
             // txtBxLocation
             // 
             this.txtBxLocation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
             this.txtBxLocation.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBxLocation.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBxLocation.Location = new System.Drawing.Point(260, 351);
+            this.txtBxLocation.Location = new System.Drawing.Point(347, 439);
+            this.txtBxLocation.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBxLocation.Multiline = true;
             this.txtBxLocation.Name = "txtBxLocation";
-            this.txtBxLocation.Size = new System.Drawing.Size(464, 46);
+            this.txtBxLocation.Size = new System.Drawing.Size(617, 56);
             this.txtBxLocation.TabIndex = 9;
-            // 
-            // btnClose
-            // 
-            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
-            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
-            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnClose.Location = new System.Drawing.Point(942, 688);
-            this.btnClose.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnClose.Name = "btnClose";
-            this.btnClose.Size = new System.Drawing.Size(437, 102);
-            this.btnClose.TabIndex = 13;
-            this.btnClose.Text = "Close";
-            this.btnClose.UseVisualStyleBackColor = false;
-            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // btnConfirm
             // 
@@ -177,10 +169,10 @@
             this.btnConfirm.FlatAppearance.BorderColor = System.Drawing.Color.White;
             this.btnConfirm.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirm.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.btnConfirm.Location = new System.Drawing.Point(45, 688);
-            this.btnConfirm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnConfirm.Location = new System.Drawing.Point(60, 860);
+            this.btnConfirm.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnConfirm.Name = "btnConfirm";
-            this.btnConfirm.Size = new System.Drawing.Size(437, 102);
+            this.btnConfirm.Size = new System.Drawing.Size(583, 128);
             this.btnConfirm.TabIndex = 14;
             this.btnConfirm.Text = "Confirm";
             this.btnConfirm.UseVisualStyleBackColor = false;
@@ -191,17 +183,33 @@
             this.lblError.AutoSize = true;
             this.lblError.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblError.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.lblError.Location = new System.Drawing.Point(45, 616);
+            this.lblError.Location = new System.Drawing.Point(60, 770);
+            this.lblError.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblError.Name = "lblError";
-            this.lblError.Size = new System.Drawing.Size(0, 46);
+            this.lblError.Size = new System.Drawing.Size(0, 63);
             this.lblError.TabIndex = 15;
+            // 
+            // btnClose
+            // 
+            this.btnClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(101)))), ((int)(((byte)(113)))), ((int)(((byte)(152)))));
+            this.btnClose.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnClose.Font = new System.Drawing.Font("Microsoft Sans Serif", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnClose.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.btnClose.Location = new System.Drawing.Point(1256, 860);
+            this.btnClose.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(583, 128);
+            this.btnClose.TabIndex = 13;
+            this.btnClose.Text = "Close";
+            this.btnClose.UseVisualStyleBackColor = false;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
             // FrmSavedSearch
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(56)))), ((int)(((byte)(102)))));
-            this.ClientSize = new System.Drawing.Size(1478, 844);
+            this.ClientSize = new System.Drawing.Size(1971, 1055);
             this.Controls.Add(this.lblError);
             this.Controls.Add(this.btnConfirm);
             this.Controls.Add(this.btnClose);
@@ -213,6 +221,7 @@
             this.Controls.Add(this.lblAge);
             this.Controls.Add(this.lblSavedSearch);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "FrmSavedSearch";
             this.Text = "FrmSavedSearch";
             this.Load += new System.EventHandler(this.FrmSavedSearch_Load);
@@ -233,8 +242,8 @@
         private System.Windows.Forms.Label lblLocation;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.TextBox txtBxLocation;
-        private System.Windows.Forms.Button btnClose;
         private System.Windows.Forms.Button btnConfirm;
         private System.Windows.Forms.Label lblError;
+        private System.Windows.Forms.Button btnClose;
     }
 }
